@@ -1,17 +1,28 @@
 <template>
   <div>
-    <h1>Containers:</h1>
     <b-container class="bv-example-row">
       <b-row>
-        <b-col>1 of 3</b-col>
-        <b-col>2 of 3</b-col>
-        <b-col>3 of 3</b-col>
+        <b-col><Carousal /></b-col>
+      </b-row>
+
+      <b-row>
+        <b-col><Cards /></b-col>
+        <b-col><Jumbotron /></b-col>
       </b-row>
     </b-container>
   </div>
 </template>
 <script>
+import Cards from "../components/Cards.vue";
+import Carousal from "../components/Carousal.vue";
+import Jumbotron from "../components/Jumbotron.vue";
+
 export default {
-  name: "Containers"
+  name: "Containers",
+  components: {
+    Cards,
+    Carousal,
+    Jumbotron
+  }
 };
 </script>

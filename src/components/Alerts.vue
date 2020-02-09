@@ -26,11 +26,11 @@
       ></b-progress>
     </b-alert>
 
-    <b-button @click="showAlert" variant="info" class="m-1">
-      Show alert with count-down timer
-    </b-button>
     <b-button @click="showDismissibleAlert = true" variant="info" class="m-1">
       Group name ({{ showDismissibleAlert ? "visible" : "hidden" }})
+    </b-button>
+    <b-button @click="showAlert" variant="info" class="m-1">
+      Show alert with count-down timer
     </b-button>
   </div>
 </template>

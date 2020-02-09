@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Carousal:</h1>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -10,6 +9,7 @@
       background="#ababab"
       img-width="1024"
       img-height="480"
+      fade="true"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
