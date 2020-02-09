@@ -1,21 +1,17 @@
 <template>
   <div id="app">
-    <!-- <div id="nav"> -->
-    <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view /> -->
-    <BootstrapVue />
+    <Navbar />
+    <router-view />
+    <!-- <BootstrapVue /> -->
   </div>
 </template>
 
 <script>
-import BootstrapVue from "./components/BootstrapVue.vue";
-
+import Navbar from "./components/Navbar";
 export default {
   name: "App",
   components: {
-    BootstrapVue
+    Navbar
   }
 };
 </script>

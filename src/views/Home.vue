@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <GlyphiconsAndFontawesome />
+    <Cards />
+    <Containers />
+    <Carousal />
+    <Jumbotron />
+    <Images />
+    <Modal />
+    <Badges />
+    <Alerts />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Alerts from "../components/Alerts.vue";
+import Badges from "../components/Badges.vue";
+import Cards from "../components/Cards.vue";
+import Carousal from "../components/Carousal.vue";
+import Containers from "../components/Containers.vue";
+import GlyphiconsAndFontawesome from "../components/GlyphiconsAndFontawesome.vue";
+import Images from "../components/Images.vue";
+import Jumbotron from "../components/Jumbotron.vue";
+import Modal from "../components/Modal.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    Alerts,
+    Badges,
+    Cards,
+    Carousal,
+    Containers,
+    GlyphiconsAndFontawesome,
+    Images,
+    Jumbotron,
+    Modal
   }
 };
 </script>
