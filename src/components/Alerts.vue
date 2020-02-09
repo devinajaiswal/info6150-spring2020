@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1>Alerts:</h1>
-    <b-alert show>Default Alert</b-alert>
-
-    <b-alert variant="success" show>Success Alert</b-alert>
+    <b-alert show>
+      <font-awesome-icon icon="hammer" />
+      Website developing...
+      <font-awesome-icon icon="hammer" />
+    </b-alert>
 
     <b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
-      Dismissible Alert!
+      🐂🍺
     </b-alert>
 
     <b-alert
@@ -29,7 +30,7 @@
       Show alert with count-down timer
     </b-button>
     <b-button @click="showDismissibleAlert = true" variant="info" class="m-1">
-      Show dismissible alert ({{ showDismissibleAlert ? "visible" : "hidden" }})
+      Group name ({{ showDismissibleAlert ? "visible" : "hidden" }})
     </b-button>
   </div>
 </template>

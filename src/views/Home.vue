@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <GlyphiconsAndFontawesome />
+    <Alerts />
     <Cards />
     <Containers />
     <Carousal />
@@ -8,7 +8,6 @@
     <Images />
     <Modal />
     <Badges />
-    <Alerts />
   </div>
 </template>
 
@@ -19,7 +18,6 @@ import Badges from "../components/Badges.vue";
 import Cards from "../components/Cards.vue";
 import Carousal from "../components/Carousal.vue";
 import Containers from "../components/Containers.vue";
-import GlyphiconsAndFontawesome from "../components/GlyphiconsAndFontawesome.vue";
 import Images from "../components/Images.vue";
 import Jumbotron from "../components/Jumbotron.vue";
 import Modal from "../components/Modal.vue";
@@ -32,7 +30,6 @@ export default {
     Cards,
     Carousal,
     Containers,
-    GlyphiconsAndFontawesome,
     Images,
     Jumbotron,
     Modal
