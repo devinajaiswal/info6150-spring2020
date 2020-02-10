@@ -9,7 +9,7 @@
       background="#ababab"
       img-width="1920"
       img-height="1080"
-      fade="true"
+      fade
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
