@@ -42,7 +42,7 @@ export default {
         {
           nuid: "1306506",
           name: "Devina Jaiswal",
-          type: "danger",
+          type: "success",
           text: "Danger"
         }
       ]
