@@ -10,11 +10,14 @@ import {
   faUserAlt,
   faHammer
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faPlaneDeparture);
 library.add(faUserAlt);
 library.add(faHammer);
+library.add(faGithub);
+library.add(faFontAwesome);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
