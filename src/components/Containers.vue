@@ -16,17 +16,12 @@
           <!-- <Cards v-for="card in cards" :key="card.id" :card="card" /> -->
         </b-col>
       </b-row>
-
-      <b-row>
-        <b-col><Jumbotron /></b-col>
-      </b-row>
     </b-container>
   </div>
 </template>
 <script>
-import Cards from "../components/Cards.vue";
-import Carousal from "../components/Carousal.vue";
-import Jumbotron from "../components/Jumbotron.vue";
+import Cards from "./Cards.vue";
+import Carousal from "./home/Carousal.vue";
 
 export default {
   name: "Containers",
@@ -62,8 +57,7 @@ export default {
   },
   components: {
     Cards,
-    Carousal,
-    Jumbotron
+    Carousal
   }
 };
 </script>
