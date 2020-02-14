@@ -11,8 +11,6 @@
       img-height="1080"
       fade
       style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
     >
       <b-carousel-slide
         caption="Argentina"
@@ -52,10 +50,7 @@
       ></b-carousel-slide>
     </b-carousel>
 
-    <p class="mt-4">
-      Slide #: {{ slide }}<br />
-      Sliding: {{ sliding }}
-    </p>
+    <br />
   </div>
 </template>
 
@@ -64,17 +59,7 @@ export default {
   name: "Carousal",
   data() {
     return {
-      slide: 0,
-      sliding: null
     };
-  },
-  methods: {
-    onSlideStart() {
-      this.sliding = true;
-    },
-    onSlideEnd() {
-      this.sliding = false;
-    }
   }
 };
 </script>
