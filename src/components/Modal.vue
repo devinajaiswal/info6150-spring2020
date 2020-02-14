@@ -1,7 +1,6 @@
 <template>
   <div id="Modal">
     <b-button v-b-modal.modal-1>Show Group Members</b-button>
-
     <b-modal id="modal-1" title="Group Member">
       <b-table :fields="fields" :items="members">
         <template v-slot:cell(badge)="data">

@@ -26,7 +26,6 @@
 <script>
 import Cards from "../components/Cards.vue";
 import Carousal from "../components/Carousal.vue";
-import Jumbotron from "../components/Jumbotron.vue";
 
 export default {
   name: "Containers",
@@ -62,8 +61,7 @@ export default {
   },
   components: {
     Cards,
-    Carousal,
-    Jumbotron
+    Carousal
   }
 };
 </script>
