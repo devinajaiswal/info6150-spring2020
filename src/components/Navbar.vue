@@ -8,7 +8,9 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav pills>
-        
+
+          <b-nav-item href="#" ><font-awesome-icon icon="house-fill"></font-awesome-icon> JUST-GO </b-nav-item>
+
           <b-nav-item href="/" ><font-awesome-icon icon="plane-departure"></font-awesome-icon> Flights</b-nav-item>
           
           <!-- <b-nav-item href="/about">About</b-nav-item> -->
