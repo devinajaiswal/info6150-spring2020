@@ -46,6 +46,7 @@ export default {
 }
 #head {
   background-color: #00a896;
+  color: white;
 }
 .input-group-text {
   background-color: #f0f3bd;
