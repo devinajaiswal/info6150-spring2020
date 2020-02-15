@@ -52,7 +52,7 @@ export default {
   background-color: #f0f3bd;
 }
 
-button {
+#head button {
   color: #05668d !important;
   background-color: #f0f3bd !important;
   border: none !important;

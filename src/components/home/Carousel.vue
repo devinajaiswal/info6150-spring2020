@@ -101,7 +101,11 @@ export default {
   height: 60%;
 }
 .slideContent {
-  color: #f0f3bd;
+  color: white;
   background: rgba(2, 128, 144, 0.2);
+}
+
+.slideContent h1 {
+  color: #f0f3bd;
 }
 </style>

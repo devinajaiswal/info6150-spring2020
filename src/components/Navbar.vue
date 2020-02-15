@@ -83,7 +83,7 @@ export default {
   color: #f0f3bd !important;
 }
 .navbar-nav li a:hover {
-  color: #02c39a!important;
+  color: #02c39a !important;
 }
 .dropdown-menu {
   background-color: #028090;
