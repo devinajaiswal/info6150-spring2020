@@ -8,13 +8,6 @@
       lead="Be the first to know about breaking news and exclusive deals from
         JUST-GO."
     >
-      <!-- <div style="display:inline-flex">
-        <b-form-input
-          type="email"
-          placeholder="Enter your email"
-        ></b-form-input>
-        <b-button type="submit" variant="primary">Sign up</b-button>
-      </div> -->
       <div style="display:inline-flex; width:40%">
         <b-input-group>
           <b-form-input
@@ -46,35 +39,6 @@
           </b-col>
         </b-row>
       </div>
-      <!-- <hr class="my-4"> -->
-      <!-- <nav class="navbar navbar-expand-sm bg-gray justify-content-center">
-        <ul class="navbar-nav">
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">About us</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">Career</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">INVESTOR RELATIONS</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">HELP</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">PRIVACY</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">TERMS&CONDITIONS</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">STORIES</a></small>
-          </li1>
-          <li1 class="nav-item"
-            ><small> <a class="nav-link" href="#">NEWS FEED</a></small>
-          </li1>
-        </ul>
-      </nav> -->
     </b-jumbotron>
   </div>
 </template>
