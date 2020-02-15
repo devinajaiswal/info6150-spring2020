@@ -35,19 +35,29 @@ export default {
                 "https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
               dcrp: [
                 {
-                  text: "London"
+                  text: "London",
+                  src:
+                    "https://lh3.googleusercontent.com/proxy/s9wmyTwH6zHnd4BOe1AtqG_YkKWXE2186NkWQQ1KCB8ckNP3rJjNQnDzgtbH2HshIgRNk-_TGEr_EVPA7U3fOASACP5-D-srk2ZS7WygT65VUrraBjvd2wa0Hg"
                 },
                 {
-                  text: "Amsterdam"
+                  text: "Amsterdam",
+                  src:
+                    "https://lh3.googleusercontent.com/proxy/LLtdjIMMcYsYRniIltaoenH4CC6nmwb3X8OjqGAAIK5hZ3vejh_sGxq4NLUf-fj4DYFKiMz9EpsNWXYVelI0nRtyQ5BvlcdJ_k1I_kfS7QNk43GQLNrKqSz_K50DIHno94OH8kt7St8Id9PmKi-gzeAx"
                 },
                 {
-                  text: "Rome"
+                  text: "Rome",
+                  src:
+                    "https://lh3.googleusercontent.com/proxy/B4BTL-S2o2m-3ri9mg4mvpvq9QciRc0fYoT1POzdumrPa17ub2aX17buaR6y96Agg4qZCWlq_ownJa10XvqzHIRxgGP_XjHAKHlX3FADYG0yrNcjviHtwRzJ9k3vvSaFS_rvARqpHWBb"
                 },
                 {
-                  text: "Paris"
+                  text: "Paris",
+                  src:
+                    "https://lh3.googleusercontent.com/proxy/cFaUonJJTqFf8AE6Igd1eaAqBjQcVbhrJOzr2kgo7l_GU5GTkPVe_p1e6yJWvsxfHIbNR0bKCwfC9FGHpNOsx6kVMPyWv2lYG9HOvXJBSKqiLuRrr1hsMA1TZPQ"
                 },
                 {
-                  text: "Barcelona"
+                  text: "Barcelona",
+                  src:
+                    "https://pldi17.sigplan.org/getImage/carousel/tour_img-323023-90.jpg?1474577784000"
                 }
               ],
               buttonText: "View all destinations in Europe"
