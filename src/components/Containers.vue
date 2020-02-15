@@ -35,7 +35,6 @@
           />
         </b-col>
       </b-row>
-
     </b-container>
   </div>
 </template>
@@ -112,7 +111,7 @@ export default {
           dcrp5: "Auckland",
           buttonText: "View all destinations in Australia"
         },
-         {
+        {
           id: "3",
           title: "Africa",
           url:

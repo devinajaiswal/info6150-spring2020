@@ -4,9 +4,7 @@ import Vue from "vue";
 import "./plugins/bootstrap-vue";
 import App from "./App.vue";
 import router from "./router";
-import {
-  library
-} from "@fortawesome/fontawesome-svg-core";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPlaneDeparture,
   faUserAlt,
@@ -25,11 +23,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
-  faFontAwesome
+  faFontAwesome,
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faVimeo,
+  faYoutube,
+  faInstagram
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  FontAwesomeIcon
-} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faPlaneDeparture);
 library.add(faUserAlt);
@@ -47,6 +49,12 @@ library.add(faGift);
 library.add(faMobile);
 library.add(faListAlt);
 library.add(faRoute);
+library.add(faFacebook);
+library.add(faTwitter);
+library.add(faLinkedin);
+library.add(faVimeo);
+library.add(faYoutube);
+library.add(faInstagram);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
