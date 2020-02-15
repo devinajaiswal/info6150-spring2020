@@ -2,7 +2,7 @@
   <div>
     <div>
       <b-card
-        v-bind:title="title" 
+        v-bind:title="title"
         v-bind:img-src="url"
         img-alt="Image"
         img-top
