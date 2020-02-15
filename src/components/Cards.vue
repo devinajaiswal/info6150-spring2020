@@ -2,7 +2,6 @@
   <div>
     <div>
       <b-card
-        id="cards"
         v-bind:title="title"
         v-bind:img-src="url"
         img-alt="Image"
@@ -12,18 +11,11 @@
         class="mb-2"
         bg-variant="light"
       >
-        <DestinationCard
-          v-for="(item, index) in description"
-          :key="index"
-          :title="item.text"
-          :src="item.src"
-        />
-
-        <!-- <b-list-group v-for="(item, index) in description" :key="index">
+        <b-list-group v-for="(item, index) in description" :key="index">
           <b-list-group-item variant="success" href="#">{{
             item.text
           }}</b-list-group-item></b-list-group
-        ><br /> -->
+        ><br />
 
         <b-button class="border-0" href="#">{{ buttonText }}</b-button>
       </b-card>
@@ -31,7 +23,6 @@
   </div>
 </template>
 <script>
-import DestinationCard from "./DestinationCard.vue";
 export default {
   name: "Cards",
   props: {
@@ -39,33 +30,26 @@ export default {
     title: String,
     description: Array,
     buttonText: String
-  },
-  components: {
-    DestinationCard
   }
 };
 </script>
 <style>
-#cards .card-body {
+.card-body {
   background-color: #028090;
 }
-
-#cards .card-body .card-body {
-  background-color: initial;
-}
-#cards .card-title {
+.card-title {
   color: #f0f3bd;
 }
-#cards .list-group a {
+.list-group a {
   color: #f0f3bd;
   background-color: rgba(240, 243, 189, 0.6) !important;
 }
 
-#cards .list-group a:hover {
+.list-group a:hover {
   color: rgba(68, 68, 57, 0.6) !important;
 }
 
-#cards .card a {
+.card a {
   color: white;
   background-color: rgba(240, 243, 189, 0.6);
 }

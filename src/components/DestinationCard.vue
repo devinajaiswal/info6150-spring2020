@@ -2,10 +2,9 @@
   <div>
     <div>
       <b-card
-        overlay
         v-bind:title="title"
         v-bind:img-src="src"
-        img-alt="Card Image"
+        img-alt="Image"
         class="mb-2"
         bg-variant="light"
       >
