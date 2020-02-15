@@ -2,7 +2,7 @@
   <div>
     <b-alert show>
       <font-awesome-icon icon="hammer" />
-      Website developing...
+      Call a JUST-GO travel specialist 24/7 on 1 000 222 3333
       <font-awesome-icon icon="hammer" />
     </b-alert>
 
