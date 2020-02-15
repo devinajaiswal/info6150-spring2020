@@ -42,15 +42,15 @@ export default {
 }
 .list-group a {
   color: #f0f3bd;
-  background-color: rgba(240, 243, 189, 0.4) !important;
+  background-color: rgba(240, 243, 189, 0.6) !important;
 }
 
 .list-group a:hover {
-  color: white !important;
+  color: rgba(68, 68, 57, 0.6) !important;
 }
 
 .card a {
-  color: #f0f3bd;
+  color: white;
   background-color: rgba(240, 243, 189, 0.6);
 }
 </style>
