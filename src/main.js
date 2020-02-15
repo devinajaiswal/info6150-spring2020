@@ -11,7 +11,17 @@ import {
   faPlaneDeparture,
   faUserAlt,
   faHammer,
-  faGlobeEurope
+  faGlobeEurope,
+  faHotel,
+  faShip,
+  faMapMarkedAlt,
+  faUmbrellaBeach,
+  faCar,
+  faPercentage,
+  faGift,
+  faMobile,
+  faListAlt,
+  faRoute
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -26,8 +36,17 @@ library.add(faUserAlt);
 library.add(faHammer);
 library.add(faGithub);
 library.add(faFontAwesome);
-library.add(faGlobeEurope)
-
+library.add(faGlobeEurope);
+library.add(faHotel);
+library.add(faShip);
+library.add(faMapMarkedAlt);
+library.add(faUmbrellaBeach);
+library.add(faCar);
+library.add(faPercentage);
+library.add(faGift);
+library.add(faMobile);
+library.add(faListAlt);
+library.add(faRoute);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
