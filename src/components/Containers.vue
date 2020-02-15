@@ -2,7 +2,7 @@
   <div>
     <b-container class="bv-example-row">
       <b-row>
-        <b-col><Carousal /></b-col>
+        <b-col><Carousel /></b-col>
       </b-row>
 
       <b-row>
@@ -21,7 +21,7 @@
 </template>
 <script>
 import Cards from "./Cards.vue";
-import Carousal from "./home/Carousal.vue";
+import Carousel from "./home/Carousel.vue";
 
 export default {
   name: "Containers",
@@ -57,7 +57,7 @@ export default {
   },
   components: {
     Cards,
-    Carousal
+    Carousel
   }
 };
 </script>
