@@ -17,7 +17,7 @@
           }}</b-list-group-item></b-list-group
         ><br />
 
-        <b-button href="#" variant="primary">{{ buttonText }}</b-button>
+        <b-button class="border-0" href="#">{{ buttonText }}</b-button>
       </b-card>
     </div>
   </div>
@@ -33,3 +33,24 @@ export default {
   }
 };
 </script>
+<style>
+.card-body {
+  background-color: #028090;
+}
+.card-title {
+  color: #f0f3bd;
+}
+.list-group a {
+  color: #f0f3bd;
+  background-color: rgba(240, 243, 189, 0.4) !important;
+}
+
+.list-group a:hover {
+  color: white !important;
+}
+
+.card a {
+  color: #f0f3bd;
+  background-color: rgba(240, 243, 189, 0.6);
+}
+</style>
