@@ -29,5 +29,6 @@ export default {
 <style>
 #head {
   background-color: #00a896;
+  color: white;
 }
 </style>
