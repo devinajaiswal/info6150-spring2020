@@ -1,65 +1,122 @@
 <template>
   <div>
-    <b-jumbotron >
-       <h3>Join us for exclusive deals & rates — it’s free.</h3>
-      <h4><small>Be the first to know about breaking news and exclusive deals from JUST-GO.</small></h4>
-     <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Insert Your Email And Join Us">
-    <div class="input-group-append">
-      <button class="btn btn-success" type="submit">Join</button>  
-     </div>
-  </div>
-    <hr class="my-4">
-      <Modal />
-     
-      <b-button
-        variant="dark"
-        href="https://github.com/SylvanWang/info6150-spring2020"
-      >
-  
-        <font-awesome-icon :icon="['fab', 'github']" size="5x" />
-      </b-button>
-      <p>Check out our website on github</p>
-      <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color="#E5E5E5" size="3" />
-       <!-- <hr class="my-4"> -->
-      <nav class="navbar navbar-expand-sm bg-gray justify-content-center"> 
-  <ul class="navbar-nav">
-    <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">ABOUT US</a></small>
-    </li1>
-    <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">WORK WITH US</a></small>
-    </li1>
-    <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">INVESTOR RELATIONS</a></small>
-    </li1>
-     <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">HELP</a></small>
-    </li1>
-     <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">PRIVACY</a></small>
-    </li1>
-     <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">TERMS&CONDITIONS</a></small>
-    </li1>
-     <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">STORIES</a></small>
-    </li1>
-     <li1 class="nav-item"><small>
-      <a class="nav-link" href="#">NEWS FEED</a></small>
-    </li1>
-  </ul>
-</nav>
+    <b-jumbotron
+      id="foot"
+      header-tag="h3"
+      header-level="5"
+      header="Join us for exclusive deals & rates — it’s free."
+      lead="Be the first to know about breaking news and exclusive deals from
+        JUST-GO."
+    >
+      <div style="display:inline-flex; width:40%">
+        <b-input-group>
+          <b-form-input
+            type="email"
+            placeholder="Enter your email"
+          ></b-form-input>
+          <b-button variant="info">Sign up</b-button>
+        </b-input-group>
+      </div>
+      <br />
+      <br />
+      <hr width="80%" color="#f0f3bd" size="3" />
+      <div style="display:inline-block; width:40%">
+        <b-row>
+          <b-col v-for="item in outLinks" :key="item.id">
+            <b-link v-bind:href="item.src">
+              <font-awesome-icon v-bind:icon="['fab', item.name]" size="2x" />
+            </b-link>
+          </b-col>
+        </b-row>
+      </div>
+      <hr width="80%" color="#f0f3bd" size="3" />
+      <div style="display:inline-block; width:70%">
+        <b-row>
+          <b-col v-for="item in inLinks" :key="item.id">
+            <b-link v-bind:href="item.src">
+              <p>{{ item.name }}</p>
+            </b-link>
+          </b-col>
+        </b-row>
+      </div>
     </b-jumbotron>
   </div>
 </template>
 <script>
-import Modal from "../Modal.vue";
 export default {
   name: "Jumbotron",
-  components: {
-    Modal
+  data() {
+    return {
+      outLinks: [
+        {
+          id: "1",
+          name: "github",
+          src: "https://github.com/SylvanWang/info6150-spring2020"
+        },
+        {
+          id: "2",
+          name: "facebook"
+        },
+        {
+          id: "3",
+          name: "twitter"
+        },
+        {
+          id: "4",
+          name: "linkedin"
+        },
+        {
+          id: "5",
+          name: "vimeo"
+        },
+        {
+          id: "6",
+          name: "youtube"
+        },
+        {
+          id: "7",
+          name: "instagram"
+        }
+      ],
+      inLinks: [
+        {
+          id: "1",
+          name: "About us"
+        },
+        {
+          id: "2",
+          name: "Career"
+        },
+        {
+          id: "3",
+          name: "Blog"
+        },
+        {
+          id: "4",
+          name: "Terms"
+        },
+        {
+          id: "5",
+          name: "Support"
+        },
+        {
+          id: "6",
+          name: "Sitemap"
+        }
+      ]
+    };
   }
 };
 </script>
-
+<style>
+#foot {
+  color: #f0f3bd;
+  background-color: #05668d;
+}
+a {
+  color: white;
+}
+a :hover {
+  color: #f0f3bd;
+}
+</style>
