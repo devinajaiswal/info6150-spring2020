@@ -64,9 +64,12 @@ color: #f0f3bd !important
 
 } 
 .dropdown-menu{
-  background-color:  #028090;
-
+  background-color: #028090;  
+  }
+.dropdown-menu a:hover{ 
+  
+color: #05668d !important;  
+background-color: #a9e4ec !important;
 }
-
 
 </style>
