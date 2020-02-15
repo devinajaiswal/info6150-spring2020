@@ -20,7 +20,9 @@ import {
   faMobile,
   faListAlt,
   faRoute,
-  faPhone
+  faPhone,
+  faSearch,
+  faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -57,6 +59,8 @@ library.add(faVimeo);
 library.add(faYoutube);
 library.add(faInstagram);
 library.add(faPhone);
+library.add(faSearch);
+library.add(faMapMarkerAlt);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
