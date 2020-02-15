@@ -9,6 +9,7 @@
         tag="article"
         style="max-width: 20rem;"
         class="mb-2"
+        bg-variant="light"
       >
         <!-- <b-card-text>
           {{ description }}
