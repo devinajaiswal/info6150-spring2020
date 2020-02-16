@@ -1,9 +1,9 @@
 <template>
   <div id="navbar">
     <b-navbar toggleable="lg">
-      <!-- <b-navbar-brand>
-    <font-awesome-icon icon="route"></font-awesome-icon>
-    </b-navbar-brand> -->
+      <b-navbar-brand href="/">
+        <b-img src="../logo@0,2x.png" fluid alt="Responsive image" height=30px></b-img>
+      </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
