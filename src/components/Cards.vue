@@ -9,30 +9,15 @@
         tag="article"
         style="max-width: 20rem;"
         class="mb-2"
+        bg-variant="light"
       >
-        <!-- <b-card-text>
-          {{ description }}
-        </b-card-text> -->
-
-        <b-list-group>
+        <b-list-group v-for="(item, index) in description" :key="index">
           <b-list-group-item variant="success" href="#">{{
-            description1
-          }}</b-list-group-item>
-          <b-list-group-item variant="success" href="#">{{
-            description2
-          }}</b-list-group-item>
-          <b-list-group-item variant="success" href="#">{{
-            description3
-          }}</b-list-group-item>
-          <b-list-group-item variant="success" href="#">{{
-            description4
-          }}</b-list-group-item>
-          <b-list-group-item variant="success" href="#">{{
-            description5
-          }}</b-list-group-item> </b-list-group
+            item.text
+          }}</b-list-group-item></b-list-group
         ><br />
 
-        <b-button href="#" variant="primary">{{ buttonText }}</b-button>
+        <b-button class="border-0" href="#">{{ buttonText }}</b-button>
       </b-card>
     </div>
   </div>
@@ -43,13 +28,29 @@ export default {
   props: {
     url: String,
     title: String,
-    // description: String,
-    description1: String,
-    description2: String,
-    description3: String,
-    description4: String,
-    description5: String,
+    description: Array,
     buttonText: String
   }
 };
 </script>
+<style>
+.card-body {
+  background-color: #028090;
+}
+.card-title {
+  color: #f0f3bd;
+}
+.list-group a {
+  color: #f0f3bd;
+  background-color: rgba(240, 243, 189, 0.6) !important;
+}
+
+.list-group a:hover {
+  color: rgba(68, 68, 57, 0.6) !important;
+}
+
+.card a {
+  color: white;
+  background-color: rgba(240, 243, 189, 0.6);
+}
+</style>

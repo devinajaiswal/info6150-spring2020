@@ -14,7 +14,8 @@
             type="email"
             placeholder="Enter your email"
           ></b-form-input>
-          <b-button variant="info">Sign up</b-button>
+          <!-- <b-button variant="info">Sign up</b-button> -->
+          <Modal />
         </b-input-group>
       </div>
       <br />
@@ -43,8 +44,12 @@
   </div>
 </template>
 <script>
+import Modal from "../Modal.vue";
 export default {
   name: "Jumbotron",
+  components: {
+    Modal
+  },
   data() {
     return {
       outLinks: [

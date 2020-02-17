@@ -1,9 +1,9 @@
 <template>
   <div id="navbar">
     <b-navbar toggleable="lg">
-      <!-- <b-navbar-brand>
-    <font-awesome-icon icon="route"></font-awesome-icon>
-    </b-navbar-brand> -->
+      <b-navbar-brand href="/">
+        <b-img src="../logo@0,2x.png" alt="Responsive image"></b-img>
+      </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
@@ -81,6 +81,9 @@ export default {
 }
 .navbar-nav li a {
   color: #f0f3bd !important;
+}
+.navbar-nav li a:hover {
+  color: #02c39a !important;
 }
 .dropdown-menu {
   background-color: #028090;
