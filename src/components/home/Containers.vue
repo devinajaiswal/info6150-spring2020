@@ -20,7 +20,7 @@
 </template>
 <script>
 import Cards from "./Cards.vue";
-import Carousel from "./home/Carousel.vue";
+import Carousel from "./Carousel.vue";
 
 export default {
   name: "Containers",
