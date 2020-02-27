@@ -2,7 +2,6 @@
   <div id="Carousel">
     <b-carousel
       id="carousel-1"
-      v-model="slide"
       :interval="4000"
       controls
       background="#ababab"
@@ -17,14 +16,14 @@
         :key="item.id"
         :img-src="item.imgSrc"
       >
-      <div class="slideContent" >
-        <div style="display:inline-flex">
-          <h1>{{ item.caption }}</h1>
-          <b-badge pill v-bind:variant="item.badgeVariant">{{
-            item.badgeText
-          }}</b-badge>
-        </div>
-        <p>{{ item.text }}</p>
+        <div class="slideContent">
+          <div style="display:inline-flex">
+            <h1>{{ item.caption }}</h1>
+            <b-badge pill v-bind:variant="item.badgeVariant">{{
+              item.badgeText
+            }}</b-badge>
+          </div>
+          <p>{{ item.text }}</p>
         </div>
       </b-carousel-slide>
     </b-carousel>
@@ -74,7 +73,8 @@ export default {
           caption: "Costa Rica",
           imgSrc:
             "https://www.wendywutours.co.uk/resource/upload/1143/banner-colours-of-costa-rica.jpg.webp",
-          text:"As the planet’s leading conservation nation, Costa Rica is a paradise for nature lovers and adventurers alike. Squeezing 5% of the planets total biodiversity into just 0.1% of the planet’s total land mass means Costa Rica’s first-rate wildlife refuges, rafting excursions, surfing hot spots and copious hiking trails always deliver on discovery.",
+          text:
+            "As the planet’s leading conservation nation, Costa Rica is a paradise for nature lovers and adventurers alike. Squeezing 5% of the planets total biodiversity into just 0.1% of the planet’s total land mass means Costa Rica’s first-rate wildlife refuges, rafting excursions, surfing hot spots and copious hiking trails always deliver on discovery.",
           badgeVariant: "success",
           badgeText: "NATURE"
         },
@@ -83,7 +83,8 @@ export default {
           caption: "Chile",
           imgSrc:
             "https://www.andbeyond.com/wp-content/uploads/sites/5/Torres-Del-Paine-Lake-and-the-Horns-in-Patagonia.jpg",
-          text: "The 2,700-mile sliver of a country contains an eclectic array of landscapes with the Andes running its whole length. Though most travelers dream first of hiking Patagonia, we strongly encourage you to linger a little longer in Chile. Discover some of our most popular adventures in Chile, including The 'W' Hike, one of the most famous hikes through Patagonia, and the idyllic Lake District and Chiloe Island trip.",
+          text:
+            "The 2,700-mile sliver of a country contains an eclectic array of landscapes with the Andes running its whole length. Though most travelers dream first of hiking Patagonia, we strongly encourage you to linger a little longer in Chile. Discover some of our most popular adventures in Chile, including The 'W' Hike, one of the most famous hikes through Patagonia, and the idyllic Lake District and Chiloe Island trip.",
           badgeVariant: "light",
           badgeText: "EXPLORE"
         }
@@ -100,7 +101,11 @@ export default {
   height: 60%;
 }
 .slideContent {
+  color: white;
+  background: rgba(2, 128, 144, 0.2);
+}
+
+.slideContent h1 {
   color: #f0f3bd;
-  background:rgba(2,128,144,0.2);
 }
 </style>
