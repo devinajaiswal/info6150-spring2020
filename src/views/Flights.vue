@@ -1,8 +1,30 @@
 <template>
   <div class="flights">
-    <h1>This is an flights page</h1>
-    <b-button @click="getJson">button</b-button>
-    <div>{{ json }}</div>
+    <b-row>
+      <b-col>
+        Airline
+      </b-col>
+      <b-col>
+        Flight Number
+      </b-col>
+      <b-col>
+        Price
+      </b-col>
+    </b-row>
+    <b-container v-for="(items, index) in json" :key="index">
+      {{ index }}
+      <b-row v-for="(item, index) in items" :key="index">
+        <b-col>
+          {{ item.airline }}
+        </b-col>
+        <b-col>
+          {{ item.flight_number }}
+        </b-col>
+        <b-col>
+          {{ item.price }}
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 <script>
@@ -12,16 +34,21 @@ export default {
       json: {}
     };
   },
+  mounted() {
+    this.getJson();
+  },
   methods: {
     getJson() {
       this.$axiosUtil
         .get("api/v1/prices/cheap", {
-          origin: "MOW",
-          destination: "HKT",
-          token: "ee5e3a59b78d121e99fd83e4420d6ccd"
+          origin: "BOS",
+          token: "ee5e3a59b78d121e99fd83e4420d6ccd",
+          page: "1",
+          currency: "USD"
         })
         .then(response => {
-          this.json = response.data;
+          console.log(response.data.data);
+          this.json = response.data.data;
         });
     }
   }
