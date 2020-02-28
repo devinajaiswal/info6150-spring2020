@@ -3,6 +3,7 @@ import "mutationobserver-shim";
 import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
+import axiosUtil from "./http/axiosUtil";
 import "./plugins/bootstrap-vue";
 import App from "./App.vue";
 import router from "./router";
@@ -39,36 +40,39 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faPlaneDeparture);
-library.add(faUserAlt);
-library.add(faHammer);
-library.add(faGithub);
-library.add(faFontAwesome);
-library.add(faGlobeEurope);
-library.add(faHotel);
-library.add(faShip);
-library.add(faMapMarkedAlt);
-library.add(faUmbrellaBeach);
-library.add(faCar);
-library.add(faPercentage);
-library.add(faGift);
-library.add(faMobile);
-library.add(faListAlt);
-library.add(faRoute);
-library.add(faFacebook);
-library.add(faTwitter);
-library.add(faLinkedin);
-library.add(faVimeo);
-library.add(faYoutube);
-library.add(faInstagram);
-library.add(faPhone);
-library.add(faSearch);
-library.add(faMapMarkerAlt);
-library.add(faHome);
+library.add(
+  faPlaneDeparture,
+  faUserAlt,
+  faHammer,
+  faGithub,
+  faFontAwesome,
+  faGlobeEurope,
+  faHotel,
+  faShip,
+  faMapMarkedAlt,
+  faMapMarkerAlt,
+  faUmbrellaBeach,
+  faCar,
+  faPercentage,
+  faGift,
+  faMobile,
+  faListAlt,
+  faRoute,
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faVimeo,
+  faYoutube,
+  faInstagram,
+  faPhone,
+  faSearch,
+  faHome
+);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
+Vue.prototype.$axiosUtil = axiosUtil;
 
 new Vue({
   router,

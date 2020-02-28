@@ -6,16 +6,23 @@
   </div>
 </template>
 <script>
-import { store } from "../store/vuex.js";
 export default {
-  computed: {
-    json() {
-      return store.state.json;
-    }
+  data() {
+    return {
+      json: {}
+    };
   },
   methods: {
     getJson() {
-      store.dispatch("getJson");
+      this.$axiosUtil
+        .get("api/v1/prices/cheap", {
+          origin: "MOW",
+          destination: "HKT",
+          token: "ee5e3a59b78d121e99fd83e4420d6ccd"
+        })
+        .then(response => {
+          this.json = response.data;
+        });
     }
   }
 };
