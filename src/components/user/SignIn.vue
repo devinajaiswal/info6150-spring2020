@@ -1,28 +1,71 @@
 <template>
   <div class="signIn">
-    <b-jumbotron>
-      <b-tabs :active-nav-item-class="['bg-primary', 'text-light']">
-        <b-tab title="Sign in" active :title-item-class="'bg-success'"
-          ><p>I'm the first tab</p></b-tab
+    <el-form class="login-container" :model="userdata">
+      <el-tabs value="first" stretch>
+        <!-- Sign up -->
+        <el-tab-pane label="Sign up" name="first" class="tab-p">
+          <el-form-item label="Username">
+            <el-input v-model="userdata.username"></el-input>
+          </el-form-item>
+          <el-form-item label="Emain">
+            <el-input v-model="userdata.email"></el-input>
+          </el-form-item>
+          <el-form-item label="Password">
+            <el-input v-model="userdata.password"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="onSubmit"
+              >Create Account</el-button
+            >
+          </el-form-item>
+        </el-tab-pane>
+        <!-- Sign in -->
+        <el-tab-pane label="Sign in" name="second" class="tab-p">
+          <el-form-item label="Username">
+            <el-input v-model="userdata.username"></el-input>
+          </el-form-item>
+          <el-form-item label="Password">
+            <el-input v-model="userdata.password"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="onSubmit">Sign in</el-button>
+          </el-form-item></el-tab-pane
         >
-        <b-tab title="Log in" :title-item-class="'bg-primary'"
-          ><p>I'm the second tab</p></b-tab
-        >
-      </b-tabs>
-    </b-jumbotron>
+      </el-tabs>
+    </el-form>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      userdata: {
+        username: "",
+        email: "",
+        password: ""
+      }
+    };
+  }
+};
+</script>
 <style scoped>
 .signIn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 66.6vw;
-  background-image: url("../.././assets/login_bg_blur.png");
+  background-position: center;
+  height: 100%;
+  width: 100%;
   background-size: cover;
+  position: fixed;
+  background-image: url("../.././assets/login_bg_blur.png");
 }
-.active a {
-  background-color: green !important;
+
+.login-container {
+  border-radius: 15px;
+  background-clip: padding-box;
+  margin: 90px auto;
+  width: 40%;
+  padding: 35px 35px 15px 35px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 0 25px #f0f3bd;
 }
 </style>

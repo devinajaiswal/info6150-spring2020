@@ -4,7 +4,9 @@ import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import axiosUtil from "./http/axiosUtil";
-import "./plugins/bootstrap-vue";
+// import "./plugins/bootstrap-vue";
+import "./theme/index.css";
+import ElementUI from "element-ui";
 import App from "./App.vue";
 import router from "./router";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -72,6 +74,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
+Vue.use(ElementUI);
 Vue.prototype.$axiosUtil = axiosUtil;
 
 new Vue({
