@@ -3,28 +3,18 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 const state = {
-  json: []
+  username: ""
 };
 
 const mutations = {
-  setJson(state, db) {
-    state.json = db;
+  setUser(state, username) {
+    state.username = username;
   }
 };
 
 const actions = {
-  getJson(context) {
-    Vue.axios
-      .get("api/getJson")
-      .then(function(response) {
-        console.log(response.data);
-        if (response.status === 200) {
-          return response.data;
-        }
-      })
-      .then(function(json) {
-        context.commit("setJson", Array.from(json));
-      });
+  getUsername(context) {
+
   }
 };
 
