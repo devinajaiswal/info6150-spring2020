@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <!-- <Navbar /> -->
+    <NavMenu />
     <router-view />
     <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-// import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
+import NavMenu from "./components/NavMenu";
 export default {
   name: "App",
   components: {
-    // Navbar,
     // Footer
+    NavMenu
   }
 };
 </script>
