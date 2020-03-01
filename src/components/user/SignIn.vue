@@ -7,7 +7,7 @@
           <el-form-item label="Username">
             <el-input v-model="userdata.username"></el-input>
           </el-form-item>
-          <el-form-item label="Emain">
+          <el-form-item label="Email">
             <el-input v-model="userdata.email"></el-input>
           </el-form-item>
           <el-form-item label="Password">

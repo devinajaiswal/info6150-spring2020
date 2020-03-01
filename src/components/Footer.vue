@@ -3,8 +3,8 @@
     <el-main bg-primary>
       <el-row type="flex" justify="center">
         <el-col
-          v-for="item in outLinks"
-          :key="item.id"
+          v-for="(item, index) in outLinks"
+          :key="index"
           :span="2"
           style="display:flex;align-items:center;justify-content:center"
         >
@@ -16,8 +16,8 @@
       <el-divider></el-divider>
       <el-row type="flex" justify="center">
         <el-col
-          v-for="item in inLinks"
-          :key="item.id"
+          v-for="(item, index) in inLinks"
+          :key="index"
           :span="2"
           style="display:flex;align-items:center;justify-content:center"
         >
