@@ -1,55 +1,36 @@
 <template>
-  <div>
-    <b-jumbotron
-      id="foot"
-      header-tag="h3"
-      header-level="5"
-      header="Join us for exclusive deals & rates — it’s free."
-      lead="Be the first to know about breaking news and exclusive deals from
-        JUST-GO."
-    >
-      <div style="display:inline-flex; width:40%">
-        <b-input-group>
-          <b-form-input
-            type="email"
-            placeholder="Enter your email"
-          ></b-form-input>
-          <!-- <b-button variant="info">Sign up</b-button> -->
-          <Modal />
-        </b-input-group>
-      </div>
-      <br />
-      <br />
-      <hr width="80%" color="#f0f3bd" size="3" />
-      <div style="display:inline-block; width:40%">
-        <b-row>
-          <b-col v-for="item in outLinks" :key="item.id">
-            <b-link v-bind:href="item.src">
-              <font-awesome-icon v-bind:icon="['fab', item.name]" size="2x" />
-            </b-link>
-          </b-col>
-        </b-row>
-      </div>
-      <hr width="80%" color="#f0f3bd" size="3" />
-      <div style="display:inline-block; width:70%">
-        <b-row>
-          <b-col v-for="item in inLinks" :key="item.id">
-            <b-link v-bind:href="item.src">
-              <p>{{ item.name }}</p>
-            </b-link>
-          </b-col>
-        </b-row>
-      </div>
-    </b-jumbotron>
-  </div>
+  <el-container>
+    <el-main>
+      <el-row type="flex" justify="center">
+        <el-col
+          v-for="item in outLinks"
+          :key="item.id"
+          :span="2"
+          style="display:flex;align-items:center;justify-content:center"
+        >
+          <el-link type="primary" :underline="false" v-bind:href="item.src">
+            <font-awesome-icon v-bind:icon="['fab', item.name]" size="2x" />
+          </el-link>
+        </el-col>
+      </el-row>
+      <el-divider></el-divider>
+      <el-row type="flex" justify="center">
+        <el-col
+          v-for="item in inLinks"
+          :key="item.id"
+          :span="2"
+          style="display:flex;align-items:center;justify-content:center"
+        >
+          <el-link type="info" :underline="false" v-bind:href="item.src">
+            {{ item.name }}
+          </el-link>
+        </el-col>
+      </el-row>
+    </el-main>
+  </el-container>
 </template>
 <script>
-import Modal from "./Modal.vue";
 export default {
-  name: "Jumbotron",
-  components: {
-    Modal
-  },
   data() {
     return {
       outLinks: [
@@ -113,15 +94,3 @@ export default {
   }
 };
 </script>
-<style>
-#foot {
-  color: #f0f3bd;
-  background-color: #05668d;
-}
-a {
-  color: white;
-}
-a :hover {
-  color: #f0f3bd;
-}
-</style>

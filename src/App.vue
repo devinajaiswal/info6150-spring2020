@@ -1,5 +1,10 @@
 <template>
-  <div id="app">
+  <!-- <div id="app">
+    <NavMenu />
+    <router-view />
+    <Footer />
+  </div> -->
+  <div>
     <NavMenu />
     <router-view />
     <Footer />
@@ -7,12 +12,12 @@
 </template>
 
 <script>
-// import Footer from "./components/Footer";
 import NavMenu from "./components/NavMenu";
+import Footer from "./components/Footer";
 export default {
   name: "App",
   components: {
-    // Footer
+    Footer,
     NavMenu
   }
 };
