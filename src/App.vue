@@ -2,7 +2,7 @@
   <div id="app">
     <NavMenu />
     <router-view />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

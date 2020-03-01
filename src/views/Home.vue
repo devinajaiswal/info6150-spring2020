@@ -1,23 +1,23 @@
 <template>
   <div class="home">
-    <Alerts />
-    <Header />
-    <Containers />
+    <Alert />
+    <!-- <Header /> -->
+    <!-- <Containers /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Alerts from "../components/home/Alerts.vue";
-import Containers from "../components/home/Containers.vue";
-import Header from "../components/home/Header.vue";
+import Alert from "../components/home/Alert.vue";
+// import Containers from "../components/home/Containers.vue";
+// import Header from "../components/home/Header.vue";
 
 export default {
   name: "Home",
   components: {
-    Alerts,
-    Containers,
-    Header
+    Alert
+    // Containers,
+    // Header
   }
 };
 </script>
