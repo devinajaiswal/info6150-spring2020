@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-main>
+    <el-main bg-primary>
       <el-row type="flex" justify="center">
         <el-col
           v-for="item in outLinks"
@@ -33,64 +33,18 @@
 export default {
   data() {
     return {
-      outLinks: [
-        {
-          id: "1",
-          name: "github",
-          src: "https://github.com/SylvanWang/info6150-spring2020"
-        },
-        {
-          id: "2",
-          name: "facebook"
-        },
-        {
-          id: "3",
-          name: "twitter"
-        },
-        {
-          id: "4",
-          name: "linkedin"
-        },
-        {
-          id: "5",
-          name: "vimeo"
-        },
-        {
-          id: "6",
-          name: "youtube"
-        },
-        {
-          id: "7",
-          name: "instagram"
-        }
-      ],
-      inLinks: [
-        {
-          id: "1",
-          name: "About us"
-        },
-        {
-          id: "2",
-          name: "Career"
-        },
-        {
-          id: "3",
-          name: "Blog"
-        },
-        {
-          id: "4",
-          name: "Terms"
-        },
-        {
-          id: "5",
-          name: "Support"
-        },
-        {
-          id: "6",
-          name: "Sitemap"
-        }
-      ]
+      outLinks: [],
+      inLinks: []
     };
+  },
+  mounted() {
+    this.loadJson();
+  },
+  methods: {
+    loadJson() {
+      this.outLinks = require("../static/footer-out-links");
+      this.inLinks = require("../static/footer-in-links");
+    }
   }
 };
 </script>

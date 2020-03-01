@@ -1,9 +1,4 @@
 <template>
-  <!-- <div id="app">
-    <NavMenu />
-    <router-view />
-    <Footer />
-  </div> -->
   <div>
     <NavMenu />
     <router-view />

@@ -13,10 +13,8 @@
           <el-form-item label="Password">
             <el-input v-model="userdata.password"></el-input>
           </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="onSubmit"
-              >Create Account</el-button
-            >
+          <el-form-item style="display:flex;justify-content:center">
+            <el-button type="primary">Create Account</el-button>
           </el-form-item>
         </el-tab-pane>
         <!-- Sign in -->
@@ -27,8 +25,8 @@
           <el-form-item label="Password">
             <el-input v-model="userdata.password"></el-input>
           </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="onSubmit">Sign in</el-button>
+          <el-form-item style="display:flex;justify-content:center">
+            <el-button type="primary">Sign in</el-button>
           </el-form-item></el-tab-pane
         >
       </el-tabs>
@@ -51,11 +49,10 @@ export default {
 <style scoped>
 .signIn {
   background-position: center;
-  height: 100%;
-  width: 100%;
+  height: 660px;
   background-size: cover;
-  position: fixed;
   background-image: url("../.././assets/login_bg_blur.png");
+  display: flex;
 }
 
 .login-container {
