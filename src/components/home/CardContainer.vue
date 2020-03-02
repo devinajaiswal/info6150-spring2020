@@ -6,8 +6,8 @@
       v-for="(item, index) in items"
       :key="index"
     >
-      <el-col :span="6">
-        <Card :imgSrc="item.imgSrc" />
+      <el-col :span="6" v-for="(item, index) in item.items" :key="index">
+        <Card :imgSrc="item.imgSrc" :title="item.title" :text="item.text" />
       </el-col>
     </el-row>
   </div>
@@ -17,24 +17,19 @@ import Card from "./Card.vue";
 export default {
   data() {
     return {
-      items: [
-        {
-          imgSrc:
-            "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-        },
-        {
-          imgSrc:
-            "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-        },
-        {
-          imgSrc:
-            "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-        }
-      ]
+      items: []
     };
   },
   components: {
     Card
+  },
+  mounted() {
+    this.loadJson();
+  },
+  methods: {
+    loadJson() {
+      this.items = require("@/static/home/card-items");
+    }
   }
 };
 </script>
