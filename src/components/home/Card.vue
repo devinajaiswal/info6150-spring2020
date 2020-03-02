@@ -1,6 +1,6 @@
 <template>
   <el-card :body-style="{ padding: '0px' }" shadow="hover">
-    <img src="imgSrc" fit="contain" style="width: 100%;" />
+    <img :src="imgSrc" fit="contain" style="width: 100%;" />
     <div style="padding: 14px;">
       <span>{{ title }}</span>
       <span>{{ text }}</span>

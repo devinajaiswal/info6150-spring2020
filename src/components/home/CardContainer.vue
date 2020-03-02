@@ -1,15 +1,19 @@
 <template>
   <div>
-    <el-row type="flex" justify="space-around" v-for="(item, index) in items" :key="index">
+    <el-row
+      type="flex"
+      justify="space-around"
+      v-for="(item, index) in items"
+      :key="index"
+    >
       <el-col :span="6">
-        <Card />
+        <Card :imgSrc="item.imgSrc" />
       </el-col>
     </el-row>
   </div>
 </template>
 <script>
 import Card from "./Card.vue";
-import Card2 from "./Card2.vue";
 export default {
   data() {
     return {
@@ -30,8 +34,7 @@ export default {
     };
   },
   components: {
-    Card,
-    Card2
+    Card
   }
 };
 </script>
