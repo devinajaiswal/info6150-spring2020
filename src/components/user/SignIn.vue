@@ -1,34 +1,53 @@
 <template>
   <div
     class="container"
-    :style="{ backgroundImage: 'url(' + this.bgImg + ')' }"
+    :style="{
+      backgroundImage: 'url(' + this.bgImg + ')',
+      height: containerHeight + 'px'
+    }"
   >
     <el-form class="login-container" :model="userdata">
       <el-tabs value="first" stretch>
         <!-- Sign up -->
         <el-tab-pane label="Sign up" name="first">
-          <el-form-item label="Username">
-            <el-input v-model="userdata.username"></el-input>
+          <el-form-item
+            label="Username"
+          >
+            <el-input
+              v-model="userdata.username"
+            ></el-input>
           </el-form-item>
-          <el-form-item label="Email">
-            <el-input v-model="userdata.email"></el-input>
+          <el-form-item label="Email" >
+            <el-input
+              v-model="userdata.email"
+            ></el-input>
           </el-form-item>
           <el-form-item label="Password">
-            <el-input v-model="userdata.password"></el-input>
+            <el-input
+              v-model="userdata.password"
+            ></el-input>
           </el-form-item>
-          <el-form-item style="display:flex;justify-content:center">
+          <el-form-item
+            style="display:flex;justify-content:center;align-items:center;height:'10vw'"
+          >
             <el-button type="primary">Create Account</el-button>
           </el-form-item>
         </el-tab-pane>
         <!-- Sign in -->
-        <el-tab-pane label="Sign in" name="second" class="tab-p">
+        <el-tab-pane
+          label="Sign in"
+          name="second"
+          :style="{ height: containerHeight }"
+        >
           <el-form-item label="Username">
             <el-input v-model="userdata.username"></el-input>
           </el-form-item>
           <el-form-item label="Password">
             <el-input v-model="userdata.password"></el-input>
           </el-form-item>
-          <el-form-item style="display:flex;justify-content:center">
+          <el-form-item
+            style="display:flex;justify-content:center"
+          >
             <el-button type="primary">Sign in</el-button>
           </el-form-item></el-tab-pane
         >
@@ -76,9 +95,9 @@ export default {
 .login-container {
   border-radius: 15px;
   background-clip: padding-box;
-  margin: 10% auto;
+  margin: 9% auto;
   width: 50%;
-  padding: 35px 35px 15px 35px;
+  padding: 5%;
   background: #fff;
   border: 1px solid #eaeaea;
   box-shadow: 0 0 25px #f0f3bd;
