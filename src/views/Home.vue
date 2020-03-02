@@ -3,8 +3,6 @@
     <Alert />
     <Carousel />
     <CardContainer />
-    <!-- <Header /> -->
-    <!-- <Containers /> -->
   </div>
 </template>
 

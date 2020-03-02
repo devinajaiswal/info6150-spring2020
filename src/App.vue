@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavMenu />
-    <router-view />
+    <div class="router-view">
+      <router-view />
+    </div>
     <Footer />
   </div>
 </template>
@@ -25,5 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: white;
+}
+.router-view {
+  background-color: #eeeeee;
 }
 </style>
