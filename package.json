@@ -17,6 +17,7 @@
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.0",
+    "koa": "^2.11.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "unirest": "^0.6.0",
