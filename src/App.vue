@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import NavMenu from "./components/NavMenu";
-import Footer from "./components/Footer";
+import NavMenu from "@/components/NavMenu";
+import Footer from "@/components/Footer";
 export default {
   name: "App",
   components: {

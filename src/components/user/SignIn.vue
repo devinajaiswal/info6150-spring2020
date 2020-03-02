@@ -1,9 +1,12 @@
 <template>
-  <div class="signIn">
+  <div
+    class="container"
+    :style="{ backgroundImage: 'url(' + this.bgImg + ')' }"
+  >
     <el-form class="login-container" :model="userdata">
       <el-tabs value="first" stretch>
         <!-- Sign up -->
-        <el-tab-pane label="Sign up" name="first" class="tab-p">
+        <el-tab-pane label="Sign up" name="first">
           <el-form-item label="Username">
             <el-input v-model="userdata.username"></el-input>
           </el-form-item>
@@ -37,29 +40,44 @@
 export default {
   data() {
     return {
+      bgImg: require("@/assets/login_bg_blur.png"),
+      containerHeight: "",
       userdata: {
         username: "",
         email: "",
         password: ""
       }
     };
+  },
+  methods: {
+    setSize: function() {
+      // calculate height
+      this.screenWidth = window.innerWidth;
+      this.containerHeight = (1 / 2) * this.screenWidth;
+    }
+  },
+  mounted() {
+    // first time load
+    this.setSize();
+    // window size change
+    window.onresize = () => {
+      this.setSize();
+    };
   }
 };
 </script>
 <style scoped>
-.signIn {
+.container {
   background-position: center;
-  height: 660px;
   background-size: cover;
-  background-image: url("../.././assets/login_bg_blur.png");
   display: flex;
 }
 
 .login-container {
   border-radius: 15px;
   background-clip: padding-box;
-  margin: 90px auto;
-  width: 40%;
+  margin: 10% auto;
+  width: 50%;
   padding: 35px 35px 15px 35px;
   background: #fff;
   border: 1px solid #eaeaea;

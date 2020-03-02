@@ -2,7 +2,7 @@
   <div class="home">
     <Alert />
     <Carousel />
-
+    <CardContainer />
     <!-- <Header /> -->
     <!-- <Containers /> -->
   </div>
@@ -10,17 +10,15 @@
 
 <script>
 // @ is an alias to /src
-import Alert from "../components/home/Alert.vue";
-import Carousel from "../components/home/Carousel.vue";
-// import Containers from "../components/home/Containers.vue";
-// import Header from "../components/home/Header.vue";
+import Alert from "@/components/home/Alert.vue";
+import Carousel from "@/components/home/Carousel.vue";
+import CardContainer from "@/components/home/CardContainer.vue";
 
 export default {
   components: {
     Alert,
-    Carousel
-    // Containers,
-    // Header
+    Carousel,
+    CardContainer
   }
 };
 </script>

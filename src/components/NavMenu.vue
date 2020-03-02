@@ -11,7 +11,7 @@
       <el-menu-item index="/" style="display:inline">
         <el-image
           style="width: 100%; height: 100%"
-          :src="require('.././assets/logo@0,2x.png')"
+          :src="require('@/assets/logo@0,2x.png')"
           fit="contain"
         ></el-image
       ></el-menu-item>

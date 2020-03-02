@@ -34,7 +34,7 @@ export default {
       this.carouselHeight = (1 / 3) * this.screenWidth;
     },
     loadJson() {
-      this.items = require("../../static/home/carousel-items");
+      this.items = require("@/static/home/carousel-items");
     }
   },
   mounted() {

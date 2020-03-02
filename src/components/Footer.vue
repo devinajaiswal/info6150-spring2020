@@ -42,8 +42,8 @@ export default {
   },
   methods: {
     loadJson() {
-      this.outLinks = require("../static/footer-out-links");
-      this.inLinks = require("../static/footer-in-links");
+      this.outLinks = require("@/static/footer-out-links");
+      this.inLinks = require("@/static/footer-in-links");
     }
   }
 };
