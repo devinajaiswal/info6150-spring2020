@@ -8,7 +8,7 @@
           :span="2"
           style="display:flex;align-items:center;justify-content:center"
         >
-          <el-link type="primary" :underline="false" v-bind:href="item.src">
+          <el-link type="primary" :underline="false" :href="item.src">
             <font-awesome-icon v-bind:icon="['fab', item.name]" size="2x" />
           </el-link>
         </el-col>
@@ -21,7 +21,7 @@
           :span="2"
           style="display:flex;align-items:center;justify-content:center"
         >
-          <el-link type="info" :underline="false" v-bind:href="item.src">
+          <el-link type="info" :underline="false" :href="item.src">
             {{ item.name }}
           </el-link>
         </el-col>

@@ -16,20 +16,24 @@
         ></el-image
       ></el-menu-item>
       <el-menu-item index="/flights">
-        <font-awesome-icon icon="plane-departure" />
-        <span slot="title">&emsp;Flights</span></el-menu-item
+        <span slot="title">
+          <font-awesome-icon icon="plane-departure" />&emsp;Flights</span
+        ></el-menu-item
       >
-      <el-menu-item index="/hotels"
-        ><font-awesome-icon icon="hotel" />
-        <span slot="title">&emsp;Hotels</span></el-menu-item
+      <el-menu-item index="/hotels">
+        <span slot="title"
+          ><font-awesome-icon icon="hotel" />&emsp;Hotels</span
+        ></el-menu-item
       >
-      <el-menu-item index="/cruises"
-        ><font-awesome-icon icon="ship" />
-        <span slot="title">&emsp;Cruises</span>&emsp;</el-menu-item
+      <el-menu-item index="/cruises">
+        <span slot="title"><font-awesome-icon icon="ship" />&emsp;Cruises</span
+        >&emsp;</el-menu-item
       >
-      <el-menu-item index="/vacation-rentals"
-        ><font-awesome-icon icon="map-marked-alt" />
-        <span slot="title">&emsp;Vacation Rentals</span></el-menu-item
+      <el-menu-item index="/vacation-rentals">
+        <span slot="title"
+          ><font-awesome-icon icon="map-marked-alt" />&emsp;Vacation
+          Rentals</span
+        ></el-menu-item
       >
       <el-submenu index="/more">
         <template slot="title">
