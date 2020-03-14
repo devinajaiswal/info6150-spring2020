@@ -6,50 +6,39 @@ const pool = mysql.createPool({
   host: "127.0.0.1",
   user: "root",
   password: "root",
-  database: "test",
+  database: "info_6150",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
 
-// simple query
-// connection.query(
-//   'SELECT * FROM `table` WHERE `name` = "Page" AND `age` > 45',
-//   function(err, results, fields) {
-//     console.log(results); // results contains rows returned by server
-//     console.log(fields); // fields contains extra meta data about results, if available
-//   }
-// );
-
-// with placeholder
-// connection.query(
-//   "SELECT * FROM `table` WHERE `name` = ? AND `age` > ?",
-//   ["Page", 45],
-//   function(err, results) {
-//     console.log(results);
-//   }
-// );
-
 var userDb = {
-  //   dbTest: () => {
-  //     pool.execute('SELECT * FROM `users` WHERE `username` = "user1"', function(
-  //       err,
-  //       results,
-  //       fields
-  //     ) {
-  //       console.log(results); // results contains rows returned by server
-  //       // console.log(fields); // fields contains extra meta data about results, if available
-  //     });
-  //   }
   dbTest: () => {
     return new Promise((resolved, rejected) => {
-      pool.query('SELECT * FROM `users` WHERE `username` = "user1"', function(
+      pool.query('SELECT * FROM `user` WHERE `username` = "admin"', function(
         err,
         results,
         fields
       ) {
-        console.log(results);
+        console.log("DB: " + results);
         resolved(results);
+      });
+    });
+  },
+  addUser: (username, password) => {
+    return new Promise((resolved, rejected) => {
+      // const sql = 'INSERT INTO `user` (`username`, `password`) VALUES (`' + username + '`, `'+ password + '`)';
+      const sql = "INSERT INTO user(username, password) VALUES(?, ?)";
+      const params = [username, password];
+
+      pool.query(sql, params, function(err, results) {
+        if (err) {
+          console.log(err);
+          resolved(err);
+        } else {
+          console.log("ADD USER: " + username);
+          resolved(results);
+        }
       });
     });
   }

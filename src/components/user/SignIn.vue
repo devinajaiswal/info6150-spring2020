@@ -10,22 +10,14 @@
       <el-tabs value="first" stretch>
         <!-- Sign up -->
         <el-tab-pane label="Sign up" name="first">
-          <el-form-item
-            label="Username"
-          >
-            <el-input
-              v-model="userdata.username"
-            ></el-input>
+          <el-form-item label="Username">
+            <el-input v-model="userdata.username"></el-input>
           </el-form-item>
-          <el-form-item label="Email" >
-            <el-input
-              v-model="userdata.email"
-            ></el-input>
+          <el-form-item label="Email">
+            <el-input v-model="userdata.email"></el-input>
           </el-form-item>
           <el-form-item label="Password">
-            <el-input
-              v-model="userdata.password"
-            ></el-input>
+            <el-input v-model="userdata.password"></el-input>
           </el-form-item>
           <el-form-item
             style="display:flex;justify-content:center;align-items:center;height:'10vw'"
@@ -45,9 +37,7 @@
           <el-form-item label="Password">
             <el-input v-model="userdata.password"></el-input>
           </el-form-item>
-          <el-form-item
-            style="display:flex;justify-content:center"
-          >
+          <el-form-item style="display:flex;justify-content:center">
             <el-button type="primary">Sign in</el-button>
           </el-form-item></el-tab-pane
         >
