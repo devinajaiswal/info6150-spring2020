@@ -8,18 +8,14 @@ router.get("/", async (ctx, next) => {
 });
 
 router.post("/", async (ctx, next) => {
-  // let result = await userController.addUser(ctx.request.body).catch(err=>{
-  //   ctx.body = err;
+  // let result = await userController.addUser(ctx.request.body).catch(err => {
+  //   console.log("WTF!");
+  //   ctx.status = 400;
   // });
-  // if(result){
+  // if(result) {
   //   ctx.body = result;
   // }
-  // ctx.body = await userController.addUser(ctx.request.body).catch(err => {
-  //   console.log("不好啦！");
-  //   console.log(err);
-  //   ctx.body = err;
-  // });
-  ctx.body = await userController.addUser(ctx.request.body);
+  ctx.status = await userController.addUser(ctx.request.body);
 });
 
 router.get("/bar", function(ctx, next) {

@@ -4,7 +4,7 @@ var userController = {
     return userDb.dbTest();
   },
   addUser: (body) => {
-    return userDb.addUser(body.username, body.password);
+    return userDb.addUser(body.username, body.email, body.password);
   }
 };
 module.exports = userController;

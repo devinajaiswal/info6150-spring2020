@@ -25,19 +25,20 @@ var userDb = {
       });
     });
   },
-  addUser: (username, password) => {
+  addUser: (username, email, password) => {
     return new Promise((resolved, rejected) => {
       // const sql = 'INSERT INTO `user` (`username`, `password`) VALUES (`' + username + '`, `'+ password + '`)';
-      const sql = "INSERT INTO user(username, password) VALUES(?, ?)";
-      const params = [username, password];
+      const sql = "INSERT INTO user(username, email, password) VALUES(?, ?, ?)";
+      const params = [username, email, password];
 
       pool.query(sql, params, function(err, results) {
         if (err) {
           console.log(err);
-          resolved(err);
+          // rejected(new Error('执行失败，给出错误'));
+          resolved(400)
         } else {
           console.log("ADD USER: " + username);
-          resolved(results);
+          resolved(200);
         }
       });
     });

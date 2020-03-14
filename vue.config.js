@@ -7,6 +7,11 @@ module.exports = {
         target: "http://api.travelpayouts.com",
         changeOrigin: true,
         pathRewrite: { "^/api": "" }
+      },
+      "/back": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+        pathRewrite: { "^/back": "" }
       }
     }
   }

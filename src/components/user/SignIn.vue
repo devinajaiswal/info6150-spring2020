@@ -22,7 +22,9 @@
           <el-form-item
             style="display:flex;justify-content:center;align-items:center;height:'10vw'"
           >
-            <el-button type="primary">Create Account</el-button>
+            <el-button type="primary" @click="signUp()"
+              >Create Account</el-button
+            >
           </el-form-item>
         </el-tab-pane>
         <!-- Sign in -->
@@ -38,7 +40,7 @@
             <el-input v-model="userdata.password"></el-input>
           </el-form-item>
           <el-form-item style="display:flex;justify-content:center">
-            <el-button type="primary">Sign in</el-button>
+            <el-button type="primary" @click="signIn()">Sign in</el-button>
           </el-form-item></el-tab-pane
         >
       </el-tabs>
@@ -62,7 +64,27 @@ export default {
     setSize: function() {
       // calculate height
       this.screenWidth = window.innerWidth;
-      this.containerHeight = (1 / 2) * this.screenWidth;
+      this.containerHeight = (5 / 9) * this.screenWidth;
+    },
+    signUp: function() {
+      this.$axiosUtil
+        .post("back/user", {
+          username: this.userdata.username,
+          email: this.userdata.email,
+          password: this.userdata.password
+        })
+        .then(
+          response => {
+            console.log(response);
+            alert("SUCCESS!");
+          },
+          () => {
+            alert("ERROR!");
+          }
+        );
+    },
+    signIn: () => {
+      alert("SIGNIN!");
     }
   },
   mounted() {
