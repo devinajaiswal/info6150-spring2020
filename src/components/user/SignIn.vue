@@ -64,7 +64,7 @@ export default {
     setSize: function() {
       // calculate height
       this.screenWidth = window.innerWidth;
-      this.containerHeight = (5 / 9) * this.screenWidth;
+      this.containerHeight = (9 / 16) * this.screenWidth;
     },
     signUp: function() {
       this.$axiosUtil
@@ -74,17 +74,23 @@ export default {
           password: this.userdata.password
         })
         .then(
-          response => {
-            console.log(response);
-            alert("SUCCESS!");
-          },
           () => {
-            alert("ERROR!");
+            this.$message({
+              message: "Sign up Success!",
+              type: "success"
+            });
+          },
+          rej => {
+            if (rej.response.status == 400) {
+              this.$message.error("Username already exists!");
+            }
           }
         );
     },
-    signIn: () => {
-      alert("SIGNIN!");
+    signIn: function() {
+      this.$store.dispatch("SignIn").then(() => {
+        this.$router.push("/");
+      });
     }
   },
   mounted() {

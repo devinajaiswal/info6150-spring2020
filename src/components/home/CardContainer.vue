@@ -2,7 +2,7 @@
   <el-container>
     <el-main>
       <el-row type="flex" style="margin-top: 0.5%">
-        <el-col span="6" offset="1">
+        <el-col :span="6" :offset="1">
           <h2>Explore the Big World!</h2>
           <p></p>
         </el-col>

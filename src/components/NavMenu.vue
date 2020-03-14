@@ -63,14 +63,48 @@
           ><font-awesome-icon icon="user-alt" />&emsp;User</template
         >
         <el-menu-item index="/profile">Profile</el-menu-item>
-        <el-menu-item index="/sign-in">Sign In</el-menu-item>
+        <el-menu-item v-show="!f1" index="/sign-in">Sign In</el-menu-item>
+        <el-menu-item v-show="f1" @click="signOut()">Sign out</el-menu-item>
       </el-submenu>
     </el-menu>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      signIn: false
+    };
+  },
+  computed: {
+    f1() {
+      return this.$store.getters.isLoggedIn;
+    }
+  },
+  mounted() {
+    this.refreshSign();
+  },
+  methods: {
+    refreshSign: function() {
+      console.log(this.$store.getters.getUsername);
+      console.log(this.$store.getters.isLoggedIn);
+      if (this.$store.getters.isLoggedIn) {
+        this.signIn = true;
+      } else {
+        this.signIn = false;
+      }
+    },
+    signOut: function() {
+      alert("SIGN OUT!");
+      this.$store.dispatch("SignOut").then(() => {
+        this.refreshSign();
+        //跳转到登录页面
+        this.$router.push("/sign-in");
+      });
+    }
+  }
+};
 </script>
 
 <style scoped>
