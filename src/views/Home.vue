@@ -1,26 +1,22 @@
 <template>
   <div class="home">
-    <Alerts />
-    <HeadJumbotron />
-    <Containers />
-    <FootJumbotron />
+    <Alert />
+    <Carousel />
+    <CardContainer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Alerts from "../components/Alerts.vue";
-import Containers from "../components/Containers.vue";
-import HeadJumbotron from "../components/home/HeadJumbotron.vue";
-import FootJumbotron from "../components/home/FootJumbotron.vue";
+import Alert from "@/components/home/Alert.vue";
+import Carousel from "@/components/home/Carousel.vue";
+import CardContainer from "@/components/home/CardContainer.vue";
 
 export default {
-  name: "Home",
   components: {
-    Alerts,
-    Containers,
-    HeadJumbotron,
-    FootJumbotron
+    Alert,
+    Carousel,
+    CardContainer
   }
 };
 </script>
