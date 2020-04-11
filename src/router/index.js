@@ -47,7 +47,10 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requireAuth) {
-    if (store.getters.isLoggedIn) {
+    console.log(store.state.username);
+    console.log(router.app.$store.getters.isLoggedIn);
+    console.log(router.app.$store.getters.getUsername);
+    if (router.app.$store.getters.isLoggedIn) {
       next();
     } else {
       next("/sign-in");

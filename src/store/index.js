@@ -4,16 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 const state = {
   id: "",
-  username: ""
+  username: localStorage.username
 };
 
 const mutations = {
   setUser(state, params) {
     state.id = params.id;
     state.username = params.username;
-    console.log("MUT");
-    console.log(params.id);
-    console.log(params.username);
+    localStorage.username = params.username;
   }
 };
 
