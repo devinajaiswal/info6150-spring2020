@@ -88,7 +88,7 @@ export default {
         );
     },
     signIn: function() {
-      this.$store.dispatch("SignIn").then(() => {
+      this.$store.dispatch("SignIn", ).then(() => {
         this.$router.push("/");
       });
     }
