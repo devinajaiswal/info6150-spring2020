@@ -21,3 +21,25 @@ npm i --save @fortawesome/vue-fontawesome
 npm i --save @fortawesome/free-brands-svg-icons
 npm i --save @fortawesome/free-regular-svg-icons
 ```
+
+### Install request/request-promise
+
+```
+npm install --save request
+npm install --save request-promise
+```
+
+### Install vuex
+
+```
+npm i vuex --save
+```
+
+### Install koa in server
+
+```
+cd src/server
+npm i koa
+npm i koa-router
+npm i koa-cors
+```
