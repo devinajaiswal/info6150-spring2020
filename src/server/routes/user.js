@@ -1,8 +1,6 @@
 const router = require("koa-router")();
 const userController = require("../controllers/userController");
 
-router.prefix("/user");
-
 // router.get("/", async (ctx, next) => {
 //   ctx.body = await userController.showUser();
 // });
@@ -29,4 +27,4 @@ router.get("/bar", function(ctx, next) {
   ctx.body = "this is a users/bar response";
 });
 
-module.exports = router;
+module.exports = router.routes();

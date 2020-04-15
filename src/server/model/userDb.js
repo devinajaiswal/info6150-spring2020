@@ -1,16 +1,5 @@
-// get the client
-const mysql = require("mysql2");
-
 // create the connection to database
-const pool = mysql.createPool({
-  host: "127.0.0.1",
-  user: "root",
-  password: "root",
-  database: "info_6150",
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-});
+const pool = require('./pool');
 
 var userDb = {
   dbTest: () => {
