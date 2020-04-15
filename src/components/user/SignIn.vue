@@ -68,7 +68,7 @@ export default {
     },
     signUp: function() {
       this.$axiosUtil
-        .post("back/user", {
+        .post("back/user/signUp", {
           username: this.userdata.username,
           email: this.userdata.email,
           password: this.userdata.password
@@ -81,16 +81,36 @@ export default {
             });
           },
           rej => {
-            if (rej.response.status == 400) {
+            if (rej.response.status == 403) {
               this.$message.error("Username already exists!");
             }
           }
         );
     },
     signIn: function() {
-      this.$store.dispatch("SignIn").then(() => {
-        this.$router.push("/");
-      });
+      this.$axiosUtil
+        .post("back/user/signIn", {
+          username: this.userdata.username,
+          password: this.userdata.password
+        })
+        .then(
+          res => {
+            this.$message({
+              message: "Sign in Success!",
+              type: "success"
+            });
+            this.$store.dispatch("SignIn",{ id: res.data.id, username: this.userdata.username}).then(() => {
+              this.$router.push("/");
+            });
+          },
+          rej => {
+            if (rej.response.status == 400) {
+              this.$message.error("ERROR!");
+            } else if (rej.response.status == 403) {
+              this.$message.error("User not found!");
+            }
+          }
+        );
     }
   },
   mounted() {
