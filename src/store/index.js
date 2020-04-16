@@ -16,10 +16,10 @@ const mutations = {
 };
 
 const actions = {
-  SignIn(context) {
+  SignIn(context, user) {
     return new Promise(resolve => {
-      context.commit("setUser", { id: 1, username: "DIO" });
-      console.log("SETTED");
+      context.commit("setUser", user);
+      console.log("LOG IN");
       resolve();
     });
   },
