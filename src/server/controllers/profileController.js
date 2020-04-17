@@ -1,10 +1,13 @@
 const profileDb = require('../model/profileDb')
 var profileController = {
   addProfile: (body) => {
-    return profileDb.addProfile(body.userid, body.username, body.email, body.city, body.about);
+    return profileDb.addProfile(body.userid, body.username, body.name, body.email, body.city, body.about);
   },
-  searchProfile:(body) => {
-    return profileDb.searchProfile(body.userid);
+  searchProfile:(userid) => {
+    return profileDb.searchProfile(userid);
+  },
+  editProfile:(body) => {
+    return profileDb.editProfile(body.name, body.email, body.city, body.about);
   }
 };
 module.exports = profileController;
