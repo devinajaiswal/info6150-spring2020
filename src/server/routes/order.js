@@ -6,7 +6,9 @@ router.post("/", async (ctx, next) => {
   ctx.body = "success"
 });
 router.get("/", async (ctx, next) => {
-  ctx.body = orderController.searchOrder();
+  var data = await orderController.searchOrders(ctx.request.query.userId);
+  ctx.status = data[0];
+  ctx.body = data[1];
 });
 
 module.exports = router.routes();

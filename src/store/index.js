@@ -3,7 +3,7 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 const state = {
-  id: "",
+  id: localStorage.id,
   username: localStorage.username
 };
 
@@ -12,6 +12,7 @@ const mutations = {
     state.id = params.id;
     state.username = params.username;
     localStorage.username = params.username;
+    localStorage.id = params.id;
   }
 };
 
@@ -45,7 +46,8 @@ const actions = {
 const getters = {
   isLoggedIn: state =>
     state.username == "undefined" ? false : !!state.username,
-  getUsername: state => state.username
+  getUsername: state => state.username,
+  getId: state => state.id
 };
 export default new Vuex.Store({
   state: state,

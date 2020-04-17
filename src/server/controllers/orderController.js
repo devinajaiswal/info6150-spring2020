@@ -3,8 +3,8 @@ var orderController = {
   addOrder: (body) => {
     return orderDb.addOrder(body.no, body.userId, body.data);
   },
-  searchOrder:(body) => {
-    return orderDb.showOrder();
+  searchOrders:(userId) => {
+    return orderDb.searchOrders(userId);
   }
 };
 module.exports = orderController;

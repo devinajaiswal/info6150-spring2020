@@ -2,7 +2,7 @@
   <el-col :span="15" :offset="1">
     <el-card shadow="hover">
       <div slot="header">
-        <span>{{ orderData.airline + orderData.flight_number }}</span>
+        <span>{{ orderData.airline }}{{ orderData.flight_number }}</span>
         <el-divider></el-divider>
         <el-row class="wow">
           <el-col :span="8">
@@ -44,26 +44,43 @@
         </el-col>
       </el-row>
       <el-divider></el-divider>
-      ${{ orderData.price }}
+      <div>
+        {{ orderData.price }}
+      </div>
     </el-card>
   </el-col>
 </template>
 <script>
 export default {
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      this.orderData.price = this.$cookies.get("price");
+      this.orderData.airline = this.$cookies.get("airline");
+      this.orderData.flight_number = this.$cookies.get("flight_number");
+      this.orderData.departure_at = this.$cookies.get("departure_at");
+      this.orderData.return_at = this.$cookies.get("return_at");
+      this.orderData.origin = this.$cookies.get("origin");
+      this.orderData.destination = this.$cookies.get("destination");
+      console.log(this.orderData);
+    }
+  },
   data() {
     return {
+      price: 0,
       orderData: {
-        price: 275,
-        airline: "AA",
-        flight_number: 1259,
-        departure_at: "2020-04-17T07:28:00Z",
-        return_at: "2020-04-22T08:30:00Z",
-        origin: "BOS",
-        destination: "AAQ"
+        price: "",
+        airline: "",
+        flight_number: "",
+        departure_at: "",
+        return_at: "",
+        origin: "",
+        destination: ""
       }
     };
-  },
-  components: {}
+  }
 };
 </script>
 <style scoped>

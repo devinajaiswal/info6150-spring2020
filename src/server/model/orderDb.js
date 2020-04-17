@@ -18,6 +18,27 @@ var orderDb = {
         }
       });
     });
+  },
+  searchOrders: (userId) => {
+    return new Promise((resolved, rejected) => {
+      const sql =
+        "SELECT * FROM `order` WHERE `user_id` = ?";
+      const params = [userId];
+
+      pool.query(sql, params, function(err, results) {
+        if (err) {
+          console.log(err);
+          resolved(400);
+        } 
+        //no result
+        else if (Object.keys(results).length == 0) {
+          resolved(404);
+        } else {
+          console.log("SEARCH ORDERS OF: " + userId);
+          resolved([200, results]);
+        }
+      });
+    });
   }
 };
 module.exports = orderDb;
