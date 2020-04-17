@@ -34,6 +34,18 @@ With a population of more than 24 million, Shanghai is China’s largest and mos
 </ul>
 </div></el-col>
 </el-row>
+<el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="16"
+        ><div class="grid-content title5">
+          <el-button type="primary" round
+            >Go Search Flights
+            <i
+              class="el-icon-arrow-right"
+            
+            ></i
+          ></el-button></div
+      ></el-col>
+    </el-row>
 </div>
 </template>
 
@@ -80,6 +92,16 @@ font-size: 1.2rem;
     line-height: 1.67;
     letter-spacing: normal;
     text-align: left;
+    color:  #00A896;
+}
+.title5{
+font-size: 1.2rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: right;
     color:  #00A896;
 }
 .describe{

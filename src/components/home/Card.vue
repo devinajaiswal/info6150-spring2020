@@ -11,7 +11,11 @@
     </div>
     <div class="card-body">
       {{ title }}
-      <i class="el-icon-arrow-right" style="float: right" @click="ToPackage()"></i>
+      <i
+        class="el-icon-arrow-right"
+        style="float: right"
+        @click="ToPackage()"
+      ></i>
     </div>
   </el-card>
 </template>
@@ -21,12 +25,11 @@ export default {
   data() {
     return {};
   },
- methods: {
+  methods: {
     ToPackage: function() {
-
-      alert("!");
-    }
-  }
+      this.$router.push("/" + this.title);
+    },
+  },
 };
 </script>
 <style scoped>

@@ -5,6 +5,13 @@
 <h1>Visit London, England</h1>
 </div></el-col>
 </el-row>
+
+<el-row type="flex" class="row-bg" justify="center">
+ <el-col :span="16"><div class="grid-content title3">
+<b>TSt. Paul's Cathedral, London, United Kingdom </b><br>
+<img class="cmp-image "  src="https://images.unsplash.com/photo-1534787146155-0104a27a2da5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+</div></el-col>
+</el-row>
 <el-row type="flex" class="row-bg" justify="center">
   <el-col :span="16"><div class="grid-content ">
 <h2>London is expensive and not as much a convenience culture as America.</h2>
@@ -19,12 +26,6 @@ England is full of pageantry and tradition, and nowhere else is that on display 
   <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
 </el-row>
 <el-row type="flex" class="row-bg" justify="center">
- <el-col :span="16"><div class="grid-content title3">
-<b>TSt. Paul's Cathedral, London, United Kingdom </b><br>
-<img class="cmp-image "  src="https://images.unsplash.com/photo-1534787146155-0104a27a2da5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
-</div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="center">
   <el-col :span="16"><div class="grid-content title4">
 <b>Best Time To Visit</b>
 <ul class="ta-article-text2">
@@ -34,6 +35,18 @@ England is full of pageantry and tradition, and nowhere else is that on display 
 </ul>
 </div></el-col>
 </el-row>
+  <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="16"
+        ><div class="grid-content title5">
+          <el-button type="primary" round
+            >Go Search Flights
+            <i
+              class="el-icon-arrow-right"
+              
+            ></i
+          ></el-button></div
+      ></el-col>
+    </el-row>
 </div>
 </template>
 
@@ -82,6 +95,18 @@ font-size: 1.2rem;
     text-align: left;
     color:  #00A896;
 }
+
+.title5{
+font-size: 1.2rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: right;
+    color:  #00A896;
+}
+
 .describe{
 text-indent: 2rem;
 font-size: 1rem;

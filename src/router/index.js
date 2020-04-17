@@ -38,7 +38,7 @@ const routes = [
     component: () => import("../components/user/Profile.vue")
   },
 {
-    path: "/Australia",
+    path: "/Sydney",
     name: "Flights",
     component: () => import("../views/Australia.vue")
   },
@@ -66,6 +66,11 @@ const routes = [
     path: "/Mumbai",
     name: "Flights",
     component: () => import("../views/Mumbai.vue")
+  },
+{
+    path: "/Hotels",
+    name: "Flights",
+    component: () => import("../views/Hotels.vue")
   },
 ];
 

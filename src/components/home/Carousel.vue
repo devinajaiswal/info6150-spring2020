@@ -1,7 +1,7 @@
 <template>
   <el-carousel
     :height="carouselHeight + 'px'"
-    :autoplay="false"
+   
     indicator-position="none"
   >
     <el-carousel-item
