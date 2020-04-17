@@ -13,4 +13,8 @@ router.post("/", async (ctx, next) => {
   ctx.status = await profileController.addProfile(ctx.request.body);
 });
 
+router.put("/", async (ctx, next) => {
+  ctx.status = await profileController.editProfile(ctx.request.body);
+});
+
 module.exports = router.routes();

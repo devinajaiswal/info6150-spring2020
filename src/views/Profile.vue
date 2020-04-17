@@ -1,12 +1,42 @@
 <template>
 <div>
     <el-container>
-    <el-main>
-    NAME: <el-input :disabled="flag" v-model="json.username"></el-input>
-    USERNAME<el-input :disabled="flag" v-model="json.username"></el-input>
-    EMAIL: <el-input :disabled="flag" v-model="json.email"></el-input>
-    CURRENT CITY: <el-input :disabled="flag" v-model="json.city"></el-input>
-    ABOUT YOU: <el-input :disabled="flag" v-model="json.about"></el-input>
+    <el-main >
+    <el-row>
+    <h1>Your Profile</h1>
+    </el-row>
+    <el-row class="list">
+    <p>NAME</p>
+    </el-row>
+    <el-row>
+    <el-input :disabled="flag" v-model="json.name"></el-input>
+    </el-row>
+    <el-row class="list">
+    <p>USERNAME</p>
+    </el-row>
+    <el-row>
+    <el-input :disabled="flag" v-model="json.username"></el-input>
+    </el-row>
+    <el-row class="list">
+    <p>EMAIL</p>
+    </el-row>
+    <el-row>
+    <el-input :disabled="flag" v-model="json.email"></el-input>
+    </el-row>
+    <el-row class="list">
+    <p>CURRENT CITY</p>
+    </el-row>
+    <el-row>
+    <el-input :disabled="flag" v-model="json.city"></el-input>
+    </el-row>
+    <el-row class="list">
+    <p>ABOUT YOU</p>
+    </el-row> 
+    <el-row>
+    <el-input :disabled="flag" v-model="json.about"></el-input>
+    </el-row>
+    <!-- USERID: <el-input :disabled="flag" v-model="json.userid"></el-input> -->
+
 
     <el-row class="wow">  
         <el-button type="primary" v-show= "flag" @click="editProfile">Edit Profile</el-button> 
@@ -20,13 +50,10 @@
 
 
 <script>
-//import Editprofile from "@/components/profile/Editprofile.vue";
-//import Viewprofile from "@/components/profile/Viewprofile.vue";
 
 export default {
   data() {
     return {
-      // bgImg: require("@/assets/login_bg_blur.png"), 
       json: {},
       flag: true    
     };
@@ -43,17 +70,15 @@ export default {
     profile() {
       this.flag = !this.flag
       this.$axiosUtil
-        .post("back/profile/", {
+        .put("back/profile/", {
 
-          username: this.json.username,
+          name: this.json.name,
           email: this.json.email,
-          userid: this.json.userid,
-          name: this.json.username,
 	        city:this.json.city,
           about:this.json.about
-                  
+          
+          // userid: 6,
           // username:"zoe",
-          // userid: 5,
           // email: "email",
 	        // city:"city",
           // about:"about"    
@@ -68,18 +93,14 @@ export default {
       this.flag = true
       this.$axiosUtil
         .get("back/profile/", {
-          userid: "5"
+          userid: "1"
         })
         .then(response => {
           console.log(response.data);
           this.json = response.data;
         });
     }
-  },
-  // components: {
-  //   Editprofile,
-  //   Viewprofile
-  // }
+  }
 };
 </script>
 <style scoped>
@@ -89,8 +110,13 @@ export default {
 }
 h1 {
   color: #00a896;
+  font-size: 300%;
+  margin:10px;
 }
 
+.list{
+  text-align: left;
+}
 .wow {
   padding: 25px
 }
@@ -98,5 +124,16 @@ h1 {
   background-color: white !important;
   color:  #00a896;
   text-align: center;
+}
+.el-main  {
+  /* border-radius: 15px; */
+  /* background-clip: padding-box;
+  margin: 3% auto; */
+  width: 50%;
+  color: #00a896;
+  padding: 10%;
+  background: rgba(230, 225, 225, 0.863);
+  /* border: 1px solid #eaeaea;
+  box-shadow: 0 0 25px #f0f3bd; */
 }
 </style>

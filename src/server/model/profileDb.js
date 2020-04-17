@@ -2,10 +2,10 @@ const pool = require('./pool');
 
 
 var profileDb = {
-  addProfile: (userid, username, email, city, about) => {
+  addProfile: (userid, username, name, email, city, about) => {
     return new Promise((resolved, rejected) => {
-      const sql = "INSERT INTO `profile`(userid, username, email, city, about) VALUES(?, ?, ?, ?, ?)";
-      const params = [userid, username, email, city, about];
+      const sql = "INSERT INTO `profile`(userid, username, name, email, city, about) VALUES(?, ?, ?, ?, ?, ?)";
+      const params = [userid, username, name, email, city, about];
       console.log(params)
 
       pool.query(sql, params, function(err) {
@@ -14,6 +14,23 @@ var profileDb = {
           resolved(400);
         } else {
           console.log("ADD PROFILE: " + username);
+          resolved(200);
+        }
+      });
+    });
+  },
+  editProfile: (name,email, city, about) => {
+    return new Promise((resolved, rejected) => {
+      const sql = "UPDATE `profile` SET name=?, email=?, city=?, about=?";
+      const params = [name,email, city, about];
+      console.log(params)
+
+      pool.query(sql, params, function(err) {
+        if (err) {
+          console.log(err);
+          resolved(400);
+        } else {
+          console.log("EDIT PROFILE: " );
           resolved(200);
         }
       });
