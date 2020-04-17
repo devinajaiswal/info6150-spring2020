@@ -2,7 +2,7 @@
   <el-col :span="15" :offset="1">
     <el-card shadow="hover">
       <div slot="header">
-        <span>{{ orderData.airline}}{{orderData.flight_number }}</span>
+        <span>{{ orderData.airline }}{{ orderData.flight_number }}</span>
         <el-divider></el-divider>
         <el-row class="wow">
           <el-col :span="8">
@@ -45,7 +45,7 @@
       </el-row>
       <el-divider></el-divider>
       <div>
-      {{ orderData.price }}
+        {{ orderData.price }}
       </div>
     </el-card>
   </el-col>
@@ -53,7 +53,7 @@
 <script>
 export default {
   mounted() {
-    this.init()
+    this.init();
   },
   methods: {
     init() {
@@ -69,7 +69,7 @@ export default {
   },
   data() {
     return {
-      price:0,
+      price: 0,
       orderData: {
         price: "",
         airline: "",

@@ -1,27 +1,25 @@
 <template>
-  <div>
-    <el-container>
-      <el-main>
-        <el-row>
-          <Title />
-        </el-row>
-        <el-row>
-          <Detail />
-          <Info />
-        </el-row>
-        <el-row>
-          <p></p>
-        </el-row>
-        <el-row>
-          <el-col :offset="1">
-            <el-button type="primary" icon="el-icon-check" @click="confirm"
-              >Confirm</el-button
-            >
-          </el-col>
-        </el-row>
-      </el-main>
-    </el-container>
-  </div>
+  <el-container>
+    <el-main>
+      <el-row>
+        <Title />
+      </el-row>
+      <el-row>
+        <Detail />
+        <Info />
+      </el-row>
+      <el-row>
+        <p></p>
+      </el-row>
+      <el-row>
+        <el-col :offset="1">
+          <el-button type="primary" icon="el-icon-check" @click="confirm"
+            >Confirm</el-button
+          >
+        </el-col>
+      </el-row>
+    </el-main>
+  </el-container>
 </template>
 <script>
 import Title from "@/components/order/Title.vue";
