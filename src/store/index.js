@@ -37,13 +37,14 @@ const actions = {
       //   .catch(error => {
       //     reject(error);
       //   });
-      context.commit("setUser","");
+      context.commit("setUser", "");
       resolve();
     });
   }
 };
 const getters = {
-  isLoggedIn: state => (state.username == "undefined" ? false : !!state.username),
+  isLoggedIn: state =>
+    state.username == "undefined" ? false : !!state.username,
   getUsername: state => state.username
 };
 export default new Vuex.Store({

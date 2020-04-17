@@ -28,14 +28,14 @@ const routes = [
     component: () => import("../views/Flights.vue")
   },
   {
-    path: "/sign-in",
+    path: "/user/sign-in",
     name: "Sign In",
-    component: () => import("../components/user/SignIn.vue")
+    component: () => import("../views/user/SignIn.vue")
   },
   {
-    path: "/profile",
+    path: "/user/profile",
     name: "Profile",
-    component: () => import("../components/user/Profile.vue")
+    component: () => import("../views/user/Profile.vue")
   }
 ];
 
