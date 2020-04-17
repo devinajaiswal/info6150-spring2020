@@ -54,26 +54,5 @@ export default {
   }
 };
 </script>
-<style scoped>
-.flights {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-background-color: rgb(235, 242, 224);
-padding: 5px 10px;
-font-size: 14px;
-font-family: Verdana;
-color: rgb(149, 170, 109);
-}
 
 
-
-/* Alternating background colors */
-.flights:nth-child(even) {
-background: rgb(230, 238, 214)
-}
-.flights::nth-child(odd) {
-background: #FFF
-}
-
-</style>

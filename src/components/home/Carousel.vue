@@ -1,7 +1,6 @@
 <template>
   <el-carousel
     :height="carouselHeight + 'px'"
-   
     indicator-position="none"
   >
     <el-carousel-item
