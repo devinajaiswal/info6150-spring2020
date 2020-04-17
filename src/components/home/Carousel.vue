@@ -1,8 +1,5 @@
 <template>
-  <el-carousel
-    :height="carouselHeight + 'px'"
-    indicator-position="none"
-  >
+  <el-carousel :height="carouselHeight + 'px'" indicator-position="none">
     <el-carousel-item
       v-for="(item, index) in items"
       :key="index"

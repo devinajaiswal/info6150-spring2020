@@ -1,7 +1,7 @@
 <template>
   <div class="Shanghai">
- <ShanghaiImage />    
-<ShanghaiDetail />  
+    <ShanghaiImage />
+    <ShanghaiDetail />
   </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ import ShanghaiDetail from "@/components/city/ShanghaiDetail.vue";
 export default {
   components: {
     ShanghaiImage,
-   ShanghaiDetail
+    ShanghaiDetail
   }
 };
 </script>

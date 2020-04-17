@@ -72,11 +72,7 @@
       <el-col :span="16"
         ><div class="grid-content title5">
           <el-button type="primary" round
-            >Go Search Flights
-            <i
-              class="el-icon-arrow-right"
-            
-            ></i
+            >Go Search Flights <i class="el-icon-arrow-right"></i
           ></el-button></div
       ></el-col>
     </el-row>

@@ -51,7 +51,10 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+        ><div
+          class="grid-content title3"
+          style="display:flex; justify-content:center; flex-direction:column"
+        >
           <b>Barcelona, Catalonia, Spain </b>
           <img
             class="cmp-image "
@@ -103,7 +106,10 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+        ><div
+          class="grid-content title3"
+          style="display:flex; justify-content:center; flex-direction:column"
+        >
           <b>Stockholm, Sweden </b>
           <img
             class="cmp-image "
@@ -156,7 +162,10 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+        ><div
+          class="grid-content title3"
+          style="display:flex; justify-content:center; flex-direction:column"
+        >
           <b>Megève, Rhône-Alpes, France </b>
           <img
             class="cmp-image "
@@ -206,7 +215,10 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+        ><div
+          class="grid-content title3"
+          style="display:flex; justify-content:center; flex-direction:column"
+        >
           <b>Cap d'Antibes, Provence, France</b>
           <img
             class="cmp-image "

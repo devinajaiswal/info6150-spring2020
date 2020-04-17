@@ -1,7 +1,7 @@
 <template>
   <div class="Mumbai">
- <MumbaiImage />    
-<MumbaiDetail />  
+    <MumbaiImage />
+    <MumbaiDetail />
   </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ import MumbaiDetail from "@/components/city/MumbaiDetail.vue";
 export default {
   components: {
     MumbaiImage,
-  MumbaiDetail
+    MumbaiDetail
   }
 };
 </script>

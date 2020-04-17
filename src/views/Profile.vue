@@ -8,7 +8,7 @@ export default {
   mounted() {
     console.log(this.$store.getters.isLoggedIn);
     console.log(this.$store.getters.getUsername);
-    console.log(this.$store.getters.getId)
+    console.log(this.$store.getters.getId);
   }
 };
 </script>

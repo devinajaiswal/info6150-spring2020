@@ -1,7 +1,7 @@
 <template>
   <div class="London">
- <LondonImage />    
-<LondonDetail />  
+    <LondonImage />
+    <LondonDetail />
   </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ import LondonDetail from "@/components/city/LondonDetail.vue";
 export default {
   components: {
     LondonImage,
-   LondonDetail
+    LondonDetail
   }
 };
 </script>

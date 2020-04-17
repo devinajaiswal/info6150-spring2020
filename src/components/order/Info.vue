@@ -1,9 +1,8 @@
 <template>
   <el-col :span="7" :offset="1">
     <h2><i class="el-icon-info" />Important Flight Information</h2>
-    <ul v-for="(item, index) in info"
-        :key="index">
-      <li>{{item}}</li>
+    <ul v-for="(item, index) in info" :key="index">
+      <li>{{ item }}</li>
     </ul>
   </el-col>
 </template>

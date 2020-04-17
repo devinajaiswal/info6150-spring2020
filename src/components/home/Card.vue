@@ -28,8 +28,8 @@ export default {
   methods: {
     ToPackage: function() {
       this.$router.push("/" + this.title);
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <div class="Chengdu">
- <ChengduImage />    
-<ChengduDetail />  
+    <ChengduImage />
+    <ChengduDetail />
   </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ import ChengduDetail from "@/components/city/ChengduDetail.vue";
 export default {
   components: {
     ChengduImage,
-   ChengduDetail
+    ChengduDetail
   }
 };
 </script>

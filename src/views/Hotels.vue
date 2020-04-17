@@ -1,6 +1,6 @@
 <template>
   <div class="Hotels">
- <hotels />    
+    <hotels />
   </div>
 </template>
 <script>

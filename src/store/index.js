@@ -12,7 +12,7 @@ const mutations = {
     state.id = params.id;
     state.username = params.username;
     localStorage.username = params.username;
-    localStorage.id = params.id
+    localStorage.id = params.id;
   }
 };
 

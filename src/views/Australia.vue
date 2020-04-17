@@ -1,8 +1,8 @@
 <template>
   <div class="Australia">
- <AustraliaImage />    
+    <AustraliaImage />
 
-<AustraliaDetail />  
+    <AustraliaDetail />
   </div>
 </template>
 <script>
