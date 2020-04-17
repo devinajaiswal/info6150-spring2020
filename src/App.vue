@@ -1,17 +1,21 @@
 <template>
-  <div id="app">
-    <Navbar />
-    <router-view />
-    <!-- <BootstrapVue /> -->
+  <div>
+    <NavMenu />
+    <div class="router-view">
+      <router-view />
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
+import NavMenu from "@/components/NavMenu";
+import Footer from "@/components/Footer";
 export default {
   name: "App",
   components: {
-    Navbar
+    Footer,
+    NavMenu
   }
 };
 </script>
@@ -22,7 +26,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: white;
+}
+.router-view {
+  background-color: #eeeeee;
 }
 </style>
