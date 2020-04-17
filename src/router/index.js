@@ -41,7 +41,43 @@ const routes = [
     path: "/order",
     name: "Order",
     component: () => import("../views/Order.vue")
+  },
+{
+    path: "/Sydney",
+    name: "Flights",
+    component: () => import("../views/Australia.vue")
+  },
+{
+    path: "/London",
+    name: "Flights",
+    component: () => import("../views/London.vue")
+  },
+{
+    path: "/Paris",
+    name: "Flights",
+    component: () => import("../views/Paris.vue")
+  },
+{
+    path: "/Shanghai",
+    name: "Flights",
+    component: () => import("../views/Shanghai.vue")
+  },
+{
+    path: "/Chengdu",
+    name: "Flights",
+    component: () => import("../views/Chengdu.vue")
+  },
+{
+    path: "/Mumbai",
+    name: "Flights",
+    component: () => import("../views/Mumbai.vue")
+  },
+{
+    path: "/Hotels",
+    name: "Flights",
+    component: () => import("../views/Hotels.vue")
   }
+
 ];
 
 const router = new VueRouter({
