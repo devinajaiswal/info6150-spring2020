@@ -30,17 +30,18 @@ import Info from "@/components/order/Info.vue";
 import { v1 as uuidv1 } from "uuid";
 
 export default {
+  mounted() {
+    this.orderData.price = this.$cookies.get("price");
+    this.orderData.airline = this.$cookies.get("airline");
+    this.orderData.flight_number = this.$cookies.get("flight_number");
+    this.orderData.departure_at = this.$cookies.get("departure_at");
+    this.orderData.return_at = this.$cookies.get("return_at");
+    this.orderData.origin = this.$cookies.get("origin");
+    this.orderData.destination = this.$cookies.get("destination");
+  },
   data() {
     return {
-      orderData: {
-        price: 275,
-        airline: "AA",
-        flight_number: 1259,
-        departure_at: "2020-04-17T07:28:00Z",
-        return_at: "2020-04-22T08:30:00Z",
-        origin: "BOS",
-        destination: "AAQ"
-      }
+      orderData: {}
     };
   },
   components: {
