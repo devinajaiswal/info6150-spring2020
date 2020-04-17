@@ -62,8 +62,8 @@
         <template slot="title"
           ><font-awesome-icon icon="user-alt" />&emsp;User</template
         >
-        <el-menu-item index="/user/profile">Profile</el-menu-item>
-        <el-menu-item v-show="!f1" index="/user/sign-in">Sign In</el-menu-item>
+        <el-menu-item index="/profile">Profile</el-menu-item>
+        <el-menu-item v-show="!f1" index="/sign-in">Sign In</el-menu-item>
         <el-menu-item v-show="f1" @click="signOut()">Sign out</el-menu-item>
       </el-submenu>
     </el-menu>
