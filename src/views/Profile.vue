@@ -41,10 +41,10 @@
           <el-button type="primary" v-show="flag" @click="editProfile"
             >Edit Profile</el-button
           >
-          <el-button type="success" v-show="!flag" @click="profile"
+          <el-button type="success" v-show="!flag" @click="update"
             >Update</el-button
           >
-          <el-button type="warning" v-show="!flag" @click="refresh"
+          <el-button type="warning" v-show="!flag" @click="getJson"
             >Cancel</el-button
           >
         </el-row>
@@ -57,6 +57,7 @@
 export default {
   data() {
     return {
+      newUser: true,
       json: {},
       flag: true
     };
@@ -70,7 +71,15 @@ export default {
     editProfile() {
       this.flag = !this.flag;
     },
-    profile() {
+    update(){
+      if(this.newUser){
+        this.createProfile();
+        this.newUser = false;
+      }else(
+        this.updateProfile()
+      )
+    },
+    updateProfile() {
       this.flag = !this.flag;
       this.$axiosUtil
         .put("back/profile/", {
@@ -91,6 +100,22 @@ export default {
         });
       // this.refresh()
     },
+    createProfile() {
+      this.flag = !this.flag;
+      this.$axiosUtil
+        .post("back/profile/", {
+          name: this.json.name,
+          email: this.json.email,
+          city: this.json.city,
+          about: this.json.about,
+          username: this.json.username,
+          userid: this.$store.getters.getId
+        })
+        .then( ()=> {
+          this.getJson()
+        });
+      // this.refresh()
+    },
     getJson() {
       this.flag = true;
       this.$axiosUtil
@@ -100,10 +125,12 @@ export default {
         .then(
           res => {
             this.json = res.data;
+            this.newUser = false;
           },
           rej => {
             console.log(rej)
             this.json = {};
+            this.newUser = true;
             this.json.username = this.$store.getters.getUsername;
           }
         );
