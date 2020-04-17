@@ -15,11 +15,11 @@
           fit="contain"
         ></el-image
       ></el-menu-item>
-      <el-menu-item index="/destinations">
+      <!-- <el-menu-item index="/destinations">
         <span slot="title">
           <font-awesome-icon icon="map-marker-alt" />&emsp;Destinations</span
         ></el-menu-item
-      >
+      > -->
       <el-menu-item index="/flights">
         <span slot="title">
           <font-awesome-icon icon="plane-departure" />&emsp;Flights</span
