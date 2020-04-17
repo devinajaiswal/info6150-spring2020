@@ -21,25 +21,20 @@ var profileDb = {
   },
   searchProfile: (userid) => {
     return new Promise((resolved, rejected) => {
-      
-    //   let uid = ctx.params.userid;
-      console.log('userid is' +userid)
       const sql = "SELECT * FROM `profile` WHERE `userid` = ? ";
       const params = [userid];
 
-      pool.query(sql, params, function(err, results) {
-        console.log("results are"+results)
+      pool.query(sql, params, function(err, results) {      
         if (err) {
           console.log(err);
           resolved(400);
         } 
         else if (Object.keys(results).length == 0) {
           resolved(404);
-        } else {
-          
-          console.log("results are"+results)
-          console.log("GET USER PROFILE: " + uid);
-          resolved([200, results]);
+        } else {      
+          console.log(results)
+          console.log("GET USER PROFILE: " );
+          resolved([200, results[0]]);
         }
       });
     });
