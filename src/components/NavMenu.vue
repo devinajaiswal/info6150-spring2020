@@ -99,7 +99,6 @@ export default {
       alert("SIGN OUT!");
       this.$store.dispatch("SignOut").then(() => {
         this.refreshSign();
-        //跳转到登录页面
         this.$router.push("/sign-in");
       });
     }

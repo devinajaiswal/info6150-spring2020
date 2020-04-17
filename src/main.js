@@ -7,6 +7,7 @@ import axiosUtil from "./http/axiosUtil";
 // import "./plugins/bootstrap-vue";
 import "./theme/index.css";
 import ElementUI from "element-ui";
+import locale from "element-ui/lib/locale/lang/en";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -75,7 +76,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
-Vue.use(ElementUI);
+Vue.use(ElementUI, { locale });
 Vue.prototype.$axiosUtil = axiosUtil;
 
 new Vue({

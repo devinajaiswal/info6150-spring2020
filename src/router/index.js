@@ -30,12 +30,17 @@ const routes = [
   {
     path: "/sign-in",
     name: "Sign In",
-    component: () => import("../components/user/SignIn.vue")
+    component: () => import("../views/SignIn.vue")
   },
   {
     path: "/profile",
     name: "Profile",
-    component: () => import("../components/user/Profile.vue")
+    component: () => import("../views/Profile.vue")
+  },
+  {
+    path: "/order",
+    name: "Order",
+    component: () => import("../views/Order.vue")
   }
 ];
 
