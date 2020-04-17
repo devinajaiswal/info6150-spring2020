@@ -8,10 +8,9 @@
       >
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
-      <el-col :span="18"
-        ><div class="grid-content title3">
+      <el-col :span="24" type="flex" justify="center">
+        <div style="display:flex; justify-content:center">
           <img
-            class="cmp-image "
             src="https://www.telegraph.co.uk/content/dam/Travel/leadAssets/35/50/nihiwatubed_3550753a.jpg?imwidth=1240"
           /></div
       ></el-col>
@@ -20,7 +19,7 @@
       <el-col :span="16"
         ><div class="grid-content ">
           <h2>Cotton House Hotel</h2>
-<h3><span class="rating">9/10</span> Just-Go rating</h3>
+          <h3><span class="rating">9/10</span> Just-Go rating</h3>
         </div></el-col
       >
     </el-row>
@@ -52,15 +51,15 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3">
-          <b>Barcelona, Catalonia, Spain </b><br />
+        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+          <b>Barcelona, Catalonia, Spain </b>
           <img
             class="cmp-image "
             src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/spain/barcelona/cotton-house-hotel-barcelona-large.jpg"
           /></div
       ></el-col>
     </el-row>
-<el-row type="flex" class="row-bg" justify="center">
+    <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="15"
         ><div class="grid-content title5">
           <el-button type="primary" round
@@ -74,8 +73,7 @@
           <h2>
             Ett Hem
           </h2>
-<h3><span class="rating">8/10</span> Just-Go rating</h3>
-
+          <h3><span class="rating">8/10</span> Just-Go rating</h3>
         </div></el-col
       >
     </el-row>
@@ -105,15 +103,15 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3">
-          <b>Stockholm, Sweden </b><br />
+        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+          <b>Stockholm, Sweden </b>
           <img
             class="cmp-image "
             src="https://www.telegraph.co.uk/content/dam/Travel/hotels/scandanavia/sweden/ett-hem-stockholm-garden-seating-large.jpg"
           /></div
       ></el-col>
     </el-row>
-<el-row type="flex" class="row-bg" justify="center">
+    <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="15"
         ><div class="grid-content title5">
           <el-button type="primary" round
@@ -125,9 +123,9 @@
       <el-col :span="16"
         ><div class="grid-content ">
           <h2>
-           Les Fermes de Marie
+            Les Fermes de Marie
           </h2>
-<h3><span class="rating">9/10</span> Just-Go rating</h3>
+          <h3><span class="rating">9/10</span> Just-Go rating</h3>
         </div></el-col
       >
     </el-row>
@@ -158,15 +156,15 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3">
-          <b>Megève, Rhône-Alpes, France </b><br />
+        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+          <b>Megève, Rhône-Alpes, France </b>
           <img
             class="cmp-image "
             src="https://www.telegraph.co.uk/content/dam/Travel/hotels/articles/fifty-best-hotels/fermes-de-marie-large.jpg"
           /></div
       ></el-col>
     </el-row>
-<el-row type="flex" class="row-bg" justify="center">
+    <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="15"
         ><div class="grid-content title5">
           <el-button type="primary" round
@@ -178,9 +176,9 @@
       <el-col :span="16"
         ><div class="grid-content ">
           <h2>
-           Hotel du Cap-Eden-Roc
+            Hotel du Cap-Eden-Roc
           </h2>
-<h3><span class="rating">9/10</span> Just-Go rating</h3>
+          <h3><span class="rating">9/10</span> Just-Go rating</h3>
         </div></el-col
       >
     </el-row>
@@ -208,15 +206,15 @@
     </el-row>
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="16"
-        ><div class="grid-content title3">
-          <b>Cap d'Antibes, Provence, France</b><br />
+        ><div class="grid-content title3" style="display:flex; justify-content:center; flex-direction:column">
+          <b>Cap d'Antibes, Provence, France</b>
           <img
             class="cmp-image "
             src="https://www.telegraph.co.uk/content/dam/Travel/hotels/articles/fifty-best-hotels/hotel-cap-eden-roc-large.jpg"
           /></div
       ></el-col>
     </el-row>
-   
+
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="15"
         ><div class="grid-content title5">
@@ -252,13 +250,12 @@ h2 {
   color: #00a896;
 }
 h3 {
-font-size: 1.2rem;
-font-family: "Austin News Deck Semibold",Georgia,Times,serif;
-text-align: left;
-
+  font-size: 1.2rem;
+  font-family: "Austin News Deck Semibold", Georgia, Times, serif;
+  text-align: left;
 }
-.rating{
-color: #02C39A;
+.rating {
+  color: #02c39a;
 }
 .title3 {
   font-size: 1.2rem;
